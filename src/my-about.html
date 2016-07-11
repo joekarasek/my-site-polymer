@@ -1,0 +1,64 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-about">
+
+    <template>
+
+        <style>
+            :host {
+                display: block;
+                padding: 10px;
+            }
+            .card {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                padding: 16px;
+                margin: 24px;
+                border-radius: 5px;
+                background-color: #fff;
+                color: #757575;
+            }
+            .technology {
+                display: inline-block;
+                border-radius: 15%;
+                background: #ddd;
+                color: #555;
+                text-align: center;
+                padding: 9px;
+            }
+        </style>
+
+        <div class="card">
+
+            <h1>About Me</h1>
+            <p>I'm an energetic and collaborative junior full stack web developer with a passion for learning and applying new skills and technologies. I'm proficient in both javascript and php with experience independently producing functional, professional, and documented software on a tight time-line.</p>
+            <p>I previously worked in environmental management as a river restoration consult and field botantist, but I didn't feel like it was the correct career path for me. So at the end of 2015 I began to teach myself how to build websites and enrolled in Epicodus, a vocational school for aspiring programmers. Over 6 months of intensive courses, I learned a wide range of web development technologies and tools. At the end of the program, I completed a 5 week internship during which I built both front- and back-end services, including a 'market trends' web component that allows users to interactively explore real estate market statistics through various charts and graphs.</p>
+        </div>
+
+    </template>
+
+    <!--Jquery TODO: Get rid of jquery -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+    <script>
+
+        Polymer({
+
+            is: 'my-about',
+
+            properties: {
+            }
+        });
+
+    </script>
+
+</dom-module>

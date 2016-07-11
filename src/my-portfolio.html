@@ -73,7 +73,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Drawer content -->
       <app-drawer>
-        <app-toolbar>Menu</app-toolbar>
+        <h1>Joe Karasek</h1>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="about" href="/about">About Me</a>
+        </iron-selector>
+        <h3>Projects</h3>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="project" href="/project">[[ projects.0.title ]]</a>
           <a name="view1" href="/view1">[[ projects.1.title ]]</a>
@@ -103,6 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-project name="view4" project="[[ projects.4 ]]"></my-project>
           <my-project name="view5" project="[[ projects.5 ]]"></my-project>
           <my-project name="view6" project="[[ projects.6 ]]"></my-project>
+          <my-about name="about"></my-about>
         </iron-pages>
 
       </app-header-layout>
@@ -122,6 +127,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         page: {
           type: String,
           reflectToAttribute: true,
+          value: "about",
           observer: '_pageChanged'
         },
         projects: {
