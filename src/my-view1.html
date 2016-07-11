@@ -27,15 +27,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: #fff;
         color: #757575;
       }
-      .circle {
+      .technology {
         display: inline-block;
-        height: 64px;
-        width: 64px;
-        border-radius: 50%;
+        border-radius: 15%;
         background: #ddd;
-        line-height: 64px;
         color: #555;
         text-align: center;
+        padding: 9px;
       }
     </style>
 
@@ -47,7 +45,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <ul>
         <template is="dom-repeat"
                   items="[[ project.tags ]]">
-          <li class="circle">[[ item ]]</li>
+          <li class="technology">[[ item ]]</li>
         </template>
       </ul>
 
