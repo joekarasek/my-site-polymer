@@ -73,11 +73,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Drawer content -->
       <app-drawer>
-        <app-toolbar>Menu</app-toolbar>
+        <h1>Joe Karasek</h1>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="project" href="/project">View One</a>
-          <a name="view2" href="/view2">View Two</a>
-          <a name="view3" href="/view3">View Three</a>
+          <a name="about" href="/about">About Me</a>
+        </iron-selector>
+        <h3>Projects</h3>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="project" href="/project">[[ projects.0.title ]]</a>
+          <a name="view1" href="/view1">[[ projects.1.title ]]</a>
+          <a name="view2" href="/view2">[[ projects.2.title ]]</a>
+          <a name="view3" href="/view3">[[ projects.3.title ]]</a>
+          <a name="view4" href="/view4">[[ projects.4.title ]]</a>
+          <a name="view5" href="/view5">[[ projects.5.title ]]</a>
+          <a name="view6" href="/view6">[[ projects.6.title ]]</a>
         </iron-selector>
       </app-drawer>
 
@@ -92,9 +100,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages role="main" selected="[[page]]" attr-for-selected="name">
-          <my-project name="project"></my-project>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3>
+          <my-project name="project" project="[[ projects.0 ]]"></my-project>
+          <my-project name="view1" project="[[ projects.1 ]]"></my-project>
+          <my-project name="view2" project="[[ projects.2 ]]"></my-project>
+          <my-project name="view3" project="[[ projects.3 ]]"></my-project>
+          <my-project name="view4" project="[[ projects.4 ]]"></my-project>
+          <my-project name="view5" project="[[ projects.5 ]]"></my-project>
+          <my-project name="view6" project="[[ projects.6 ]]"></my-project>
+          <my-about name="about"></my-about>
         </iron-pages>
 
       </app-header-layout>
@@ -114,8 +127,190 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         page: {
           type: String,
           reflectToAttribute: true,
+          value: "about",
           observer: '_pageChanged'
         },
+        projects: {
+          type: Object,
+          value: [
+            {
+              title: "Rock Paper Scissors 7",
+              layout: "project",
+              teaser: "PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.",
+              repo: "https://github.com/joekarasek/Advanced-RPS",
+              demo: null,
+              tags: [
+                "Php",
+                "PhpUnit",
+                "Silex",
+                "Twig",
+                "mySQL",
+                "Javascript"
+              ],
+              contributors: [
+                {
+                  name: "Michael Lor",
+                  link: "https://michaellor.github.io/"
+                },
+                {
+                  name: "Aundra Miller",
+                  link: "https://milleraundra.github.io/"
+                },
+                {
+                  name: "Nic Netzel",
+                  link: "https://netzeln.github.io/"
+                }
+              ],
+              body: "<p><strong>Rock Paper Scissors 7</strong> <em>is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: ‘Air’, ‘Water’, ‘Fire’, and ‘Sponge’ are added to the classic mix of ‘Rock’, ‘Paper’, and ‘Scissors’. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players’ results.</em></p>\n<p><em>This application was completed as a capstone of the level 2 PHP course at <a href=\"http://www.epicodus.com/\">Epicodus</a>. To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API.</em></p>\n"
+            },
+            {
+              title: "Bustle Clone",
+              layout: "project",
+              teaser: "A mock version of the news site Bustle built in one day in Ember.",
+              repo: "https://github.com/joekarasek/Advanced-RPS",
+              demo: "http://joekarasek.github.io/epicodus-ember-bustle/",
+              tags: [
+                "Javascript",
+                "Ember.js",
+                "Firebase DB"
+              ],
+              contributors: [
+                {
+                  name: "Brooke Hurford",
+                  link: "https://github.com/brookehurford"
+                }
+              ],
+              imgs: [
+                "screenshot1.jpg"
+              ],
+              body: "<p>This one-day project is designed to look like the news site bustle and was done to practice use of the Ember.js framework. Users can see a list of article preview titles, click on an article to be taken to its page, and use the navbar to navigate. An ‘admin’ can create, update, and delete articles (no authentication in place at this time).</p>\n"
+            },
+            {
+              title: "Ember Q and A",
+              layout: "project",
+              teaser: "Ember.js based Question and Answer board.",
+              repo: "https://github.com/joekarasek/epicodus-ember-QandA",
+              demo: "http://joekarasek.github.io/epicodus-ember-QandA",
+              tags: [
+                "Javascript",
+                "Node.js",
+                "Ember.js",
+                "Firebase DB",
+                "Materialize"
+              ],
+              imgs: [
+                "screenshot1.jpg"
+              ],
+              body: "<p>This app is designed to function as a question and answer board. Users can create questions, edit and update questions, and delete questions. Users can also create and view multiple answers for each question (a one to many database relationship).</p>\n<p>This web-app was built using the <a href=\"http://emberjs.com/\">Ember</a> framework. This web-app uses <a href=\"https://www.firebase.com/\">Firebase</a> for its database.</p>\n<p>This code was put together for the week 3 code review for the Level 2 Javascript Epicodus course.</p>\n"
+            },
+            {
+              title: "H?ke",
+              layout: "project",
+              teaser: "Hiking guide with live weather information and google maps.",
+              repo: "https://github.com/joekarasek/epicodus-hike-guide",
+              demo: "http://hike-portland.herokuapp.com",
+              tags: [
+                "Javascript",
+                "Node.js",
+                "Ember.js",
+                "Firebase DB",
+                "SASS"
+              ],
+              contributors: [
+                {
+                  name: "Sara Wagner",
+                  link: "https://github.com/swagner23q"
+                }
+              ],
+              imgs: [
+                "screenshot1.jpg",
+                "screenshot2.jpg"
+              ],
+              body: "<p>H?KE is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.</p>\n<p>This project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.</p>\n"
+            },
+            {
+              title: "Mazes",
+              layout: "project",
+              teaser: "Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.",
+              repo: "https://github.com/joekarasek/mazes.git",
+              demo: "http://joekarasek.github.io/mazes/",
+              tags: [
+                "Javascript",
+                "Node.js",
+                "Gulp"
+              ],
+              imgs: [
+                "screenshot1.jpg"
+              ],
+              body: "<p><em><strong>Mazes</strong></em> is a side project of mine. It is an exploration of the algorithms used to generate mazes and the biases these algorithms produce in the mazes. The current version of this app lets you choose from three algorithms (Binary Tree, Sidewinder, and Aldous-Broder), choose the size of your maze, and fills the maze with color to highlight the ‘texture’ of the maze (a visually easy way to reveal biases).</p>\n"
+            },
+            {
+              title: "pdxRoasted",
+              layout: "project",
+              teaser: "Search for coffees roasted in Portland by flavor profile.",
+              repo: "https://github.com/joekarasek/pdxRoasted.git",
+              demo: null,
+              tags: [
+                "Javascript",
+                "Angular 2",
+                "Firebase DB"
+              ],
+              contributors: [
+                {
+                  name: "Jason Awbrey",
+                  link: "https://github.com/jsonberry"
+                },
+                {
+                  name: "Ryan Brown",
+                  link: "https://github.com/browneryan"
+                },
+                {
+                  name: "Brooke Hurford",
+                  link: "https://github.com/brookehurford"
+                },
+                {
+                  name: "Taylor Pokoj",
+                  link: "https://github.com/pokojt"
+                }
+              ],
+              body: "<p><em><strong>pdxRoasted</strong></em> lets users explore Portland’s wonderful selection of roasted coffees. Users can create a flavor profile of one or more flavors, and are given a list of roasts based on their choices. Jason, Ryan, and built the backend of the Angular 2 app while Brooke and Taylor put together a wonderful front-end. This project was a great further exploration of Angular 2.</p>\n"
+            },
+            {
+              title: "Sportal",
+              layout: "project",
+              teaser: "This is a site that connects users with places to play recreational sports!",
+              repo: "https://github.com/joekarasek/Sportal-Drupal",
+              demo: "http://www.sportalusa.us/",
+              tags: [
+                "PHP",
+                "Drupal 7"
+              ],
+              contributors: [
+                {
+                  name: "Alex Fallenstedt",
+                  link: "https://github.com/Fallenstedt"
+                },
+                {
+                  name: "Adam Ross Russell",
+                  link: "https://github.com/adamrr724"
+                },
+                {
+                  name: "Aundra Miller",
+                  link: "https://github.com/milleraundra"
+                },
+                {
+                  name: "Ryan Brown",
+                  link: "https://github.com/browneryan"
+                },
+                {
+                  name: "Blake Scott",
+                  link: "https://github.com/blakerscott"
+                }
+              ],
+              body: "<p><em><strong>Sportal</strong></em> is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.</p>\n"
+            }
+          ]
+        }
 
       },
 
