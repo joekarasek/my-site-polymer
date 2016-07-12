@@ -16,10 +16,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+
 <link rel="import" href="my-icons.html">
+
+<link rel="import" href="./my-project.html">
+<link rel="import" href="./my-about.html">
 
 <dom-module id="my-portfolio">
 
@@ -67,19 +78,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Drawer content -->
       <app-drawer>
         <h1>Joe Karasek</h1>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="about" href="/about">About Me</a>
-        </iron-selector>
+        <paper-listbox selected="{{currentProject}}" attr-for-selected="name" class="drawer-list" role="navigation">
+          <paper-item name="about">About Me</paper-item>
+        </paper-listbox>
         <h3>Projects</h3>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="project" href="/project">[[ projects.0.title ]]</a>
-          <a name="view1" href="/project">[[ projects.1.title ]]</a>
-          <a name="view2" href="/view2">[[ projects.2.title ]]</a>
-          <a name="view3" href="/view3">[[ projects.3.title ]]</a>
-          <a name="view4" href="/view4">[[ projects.4.title ]]</a>
-          <a name="view5" href="/view5">[[ projects.5.title ]]</a>
-          <a name="view6" href="/view6">[[ projects.6.title ]]</a>
-        </iron-selector>
+        <paper-listbox selected="{{currentProject}}" attr-for-selected="name" class="drawer-list" role="navigation">
+          <paper-item name="project" >[[ projects.0.title ]]</paper-item>
+          <paper-item name="view1">[[ projects.1.title ]]</paper-item>
+          <paper-item name="view2">[[ projects.2.title ]]</paper-item>
+          <paper-item name="view3">[[ projects.3.title ]]</paper-item>
+          <paper-item name="view4">[[ projects.4.title ]]</paper-item>
+          <paper-item name="view5">[[ projects.5.title ]]</paper-item>
+          <paper-item name="view6">[[ projects.6.title ]]</paper-item>
+        </paper-listbox>
       </app-drawer>
 
       <!-- Main content -->
@@ -92,7 +103,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </app-toolbar>
         </app-header>
 
-        <iron-pages role="main" selected="[[page]]" attr-for-selected="name">
+        <iron-pages role="main" selected="[[currentProject]]" attr-for-selected="name">
           <my-project name="project" project="[[ projects.0 ]]"></my-project>
           <my-project name="view1" project="[[ projects.1 ]]"></my-project>
           <my-project name="view2" project="[[ projects.2 ]]"></my-project>
@@ -117,9 +128,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       properties: {
 
-        page: {
+        currentProject: {
           type: String,
-          reflectToAttribute: true
+          value: "about"
         },
         projects: {
           type: Object,
