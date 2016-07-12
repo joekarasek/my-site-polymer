@@ -53,22 +53,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </template>
       </ul>
 
-      <h3>Links</h3>
-
       <template is="dom-if"
-                if="[[ project.repo ]]">
-        <a href="[[ project.repo ]]" target="_blank">GitHub</a>
+                if="[[ project.repo ]] || [[ project.demo ]]">
+        <h3>Links</h3>
+
+        <template is="dom-if"
+                  if="[[ project.repo ]]">
+          <a href="[[ project.repo ]]" target="_blank">GitHub</a>
+        </template>
+
+        <template is="dom-if"
+                  if="[[ project.demo ]]">
+          <a href="[[ project.demo ]]" target="_blank">Demo</a>
+        </template>
       </template>
 
-      <template is="dom-if"
-                if="[[ project.demo ]]">
-        <a href="[[ project.demo ]]" target="_blank">Demo</a>
-      </template>
 
-      <h3>Images</h3>
-      <template is="dom-repeat"
-                items="[[ project.imgs ]]">
-        <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
+      <template is="dom-if"
+                if="[[ project.imgs ]]">
+        <h3>Images</h3>
+        <template is="dom-repeat"
+                  items="[[ project.imgs ]]">
+          <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
+        </template>
       </template>
 
       <h3>Description</h3>
