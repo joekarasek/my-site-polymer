@@ -78,18 +78,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Drawer content -->
       <app-drawer>
         <h1>Joe Karasek</h1>
-        <paper-listbox selected="{{currentProject}}" attr-for-selected="name" class="drawer-list" role="navigation">
+        <paper-listbox attr-for-selected="name"
+                       class="drawer-list"
+                       selected="{{currentProject}}"
+                       role="navigation">
           <paper-item name="about">About Me</paper-item>
         </paper-listbox>
         <h3>Projects</h3>
-        <paper-listbox selected="{{currentProject}}" attr-for-selected="name" class="drawer-list" role="navigation">
-          <paper-item name="project" >[[ projects.0.title ]]</paper-item>
-          <paper-item name="view1">[[ projects.1.title ]]</paper-item>
-          <paper-item name="view2">[[ projects.2.title ]]</paper-item>
-          <paper-item name="view3">[[ projects.3.title ]]</paper-item>
-          <paper-item name="view4">[[ projects.4.title ]]</paper-item>
-          <paper-item name="view5">[[ projects.5.title ]]</paper-item>
-          <paper-item name="view6">[[ projects.6.title ]]</paper-item>
+        <paper-listbox attr-for-selected="name"
+                       class="drawer-list"
+                       selected="{{currentProject}}"
+                       role="navigation">
+          <template is="dom-repeat"
+                    items="[[projects]]">
+            <paper-item name="[[ item.title ]]">[[ item.title ]]</paper-item>
+          </template>
         </paper-listbox>
       </app-drawer>
 
@@ -103,15 +106,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </app-toolbar>
         </app-header>
 
-        <iron-pages role="main" selected="[[currentProject]]" attr-for-selected="name">
-          <my-project name="project" project="[[ projects.0 ]]"></my-project>
-          <my-project name="view1" project="[[ projects.1 ]]"></my-project>
-          <my-project name="view2" project="[[ projects.2 ]]"></my-project>
-          <my-project name="view3" project="[[ projects.3 ]]"></my-project>
-          <my-project name="view4" project="[[ projects.4 ]]"></my-project>
-          <my-project name="view5" project="[[ projects.5 ]]"></my-project>
-          <my-project name="view6" project="[[ projects.6 ]]"></my-project>
+        <iron-pages role="main"
+                    selected="[[currentProject]]"
+                    attr-for-selected="name">
           <my-about name="about"></my-about>
+          <template is="dom-repeat"
+                    items="[[projects]]">
+            <my-project name="[[ item.title ]]" project="[[ item ]]"></my-project>
+          </template>
         </iron-pages>
 
       </app-header-layout>
