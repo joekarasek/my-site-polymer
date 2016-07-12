@@ -70,6 +70,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding-left: 32px;
       }
 
+      @media screen and (max-width: 640px) {
+        .drawer--revealed {
+          display: none;
+        }
+      }
+
+      /* break point for drawer auto-hide */
+      @media screen and (min-width: 640px) {
+        .drawer--collapsed {
+          display: none;
+        }
+      }
+
 
     </style>
 
@@ -82,7 +95,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                        class="drawer-list"
                        selected="{{currentProject}}"
                        role="navigation">
-          <paper-item name="about">About Me</paper-item>
+          <paper-item name="About">About Me</paper-item>
         </paper-listbox>
         <h3>Projects</h3>
         <paper-listbox attr-for-selected="name"
@@ -102,14 +115,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div title>My App</div>
+            <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
+            <div class="drawer--revealed" title>[[currentProject]]</div>
           </app-toolbar>
         </app-header>
 
         <iron-pages role="main"
                     selected="[[currentProject]]"
                     attr-for-selected="name">
-          <my-about name="about"></my-about>
+          <my-about name="About"></my-about>
           <template is="dom-repeat"
                     items="[[projects]]">
             <my-project name="[[ item.title ]]" project="[[ item ]]"></my-project>
@@ -132,7 +146,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         currentProject: {
           type: String,
-          value: "about"
+          value: "About"
         },
         projects: {
           type: Object,
