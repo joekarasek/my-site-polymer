@@ -63,13 +63,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h3>Description</h3>
       <p id="projectBody"></p>
 
-      <h3>Contributors</h3>
-      <ul>
-        <template is="dom-repeat"
-                  items="[[ project.contributors ]]">
-          <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
-        </template>
-      </ul>
+      <template is="dom-if" if="[[ project.contributors ]]">
+        <h3>Contributors</h3>
+        <ul>
+          <template is="dom-repeat"
+                    items="[[ project.contributors ]]">
+            <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+          </template>
+        </ul>
+      </template>
     </div>
 
   </template>
