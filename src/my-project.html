@@ -35,6 +35,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
         padding: 9px;
       }
+      img {
+        max-width: 300px;
+        max-height: 400px;
+      }
     </style>
 
     <div class="card">
@@ -49,21 +53,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </template>
       </ul>
 
-      <h3>Links</h3>
+      <template is="dom-if"
+                if="[[ project.repo ]] || [[ project.demo ]]">
+        <h3>Links</h3>
 
-      <template is="dom-if" if="[[ project.repo ]]">
-        <a href="_[[ project.repo ]]">GitHub</a>
+        <template is="dom-if"
+                  if="[[ project.repo ]]">
+          <a href="[[ project.repo ]]" target="_blank">GitHub</a>
+        </template>
+
+        <template is="dom-if"
+                  if="[[ project.demo ]]">
+          <a href="[[ project.demo ]]" target="_blank">Demo</a>
+        </template>
       </template>
 
-      <template is="dom-if" if="[[ project.demo ]]">
-        <a href="_[[ project.demo ]]">Demo</a>
-      </template>
 
+      <template is="dom-if"
+                if="[[ project.imgs ]]">
+        <h3>Images</h3>
+        <template is="dom-repeat"
+                  items="[[ project.imgs ]]">
+          <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
+        </template>
+      </template>
 
       <h3>Description</h3>
       <p id="projectBody"></p>
 
-      <template is="dom-if" if="[[ project.contributors ]]">
+      <template is="dom-if"
+                if="[[ project.contributors ]]">
         <h3>Contributors</h3>
         <ul>
           <template is="dom-repeat"
