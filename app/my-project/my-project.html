@@ -1,0 +1,130 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-project">
+
+  <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+        max-width: 1000px;
+      }
+      a {
+        color: var(--dark-primary-color) !important;
+        text-decoration: none;
+      }
+      a:visited {
+        color: var(--default-primary-color);
+      }
+      a:hover {
+        color: var(--dark-primary-color);
+        text-decoration: underline;
+      }
+      .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        color: #757575;
+        background-color: var(--secondary-background-color);
+      }
+      .technologies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .technology {
+        text-align: center;
+        flex-basis: 49%;
+      }
+      img {
+        max-width: 200px;
+        max-height: 300px;
+      }
+    </style>
+
+    <div class="card">
+
+      <h1>[[ project.attribute.title ]]</h1>
+
+      <h3>Technologies Used</h3>
+      <div class="technologies">
+        <template is="dom-repeat"
+                  items="[[ project.attributes.tags ]]">
+          <li class="technology">[[ item ]]</li>
+        </template>
+      </div>
+
+      <template is="dom-if"
+                if="[[ project.attributes.repo ]] || [[ project.attributes.demo ]] || [[ project.attributes.live ]]">
+        <h3>Links</h3>
+
+        <template is="dom-if"
+                  if="[[ project.attributes.live ]]">
+          <a href="[[ project.attributes.live ]]" target="_blank">Live Site</a>
+        </template>
+
+        <template is="dom-if"
+                  if="[[ project.attributes.repo ]]">
+          <a href="[[ project.attributes.repo ]]" target="_blank">GitHub</a>
+        </template>
+
+        <template is="dom-if"
+                  if="[[ project.attributes.demo ]]">
+          <a href="[[ project.attributes.demo ]]" target="_blank">Demo</a>
+        </template>
+      </template>
+
+      <h3>Description</h3>
+      <p id="projectBody"></p>
+
+      <template is="dom-if"
+                if="[[ project.attributes.contributors ]]">
+        <h3>Contributors</h3>
+        <ul>
+          <template is="dom-repeat"
+                    items="[[ project.attributes.contributors ]]">
+            <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+          </template>
+        </ul>
+      </template>
+
+      <template is="dom-if"
+                if="[[ project.attributes.imgs ]]">
+        <h3>Images</h3>
+        <template is="dom-repeat"
+                  items="[[ project.attributes.imgs ]]">
+          <img src="/app/resources/images/project_images/[[ item ]]" >
+        </template>
+      </template>
+    </div>
+
+  </template>
+
+  <!--Jquery TODO: Get rid of jquery -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-project',
+
+      properties: {
+        project: {
+          type: Object,
+          value: {
+          }
+        }
+      },
+
+      attached: function() {
+        this.$.projectBody.innerHTML = this.project.html;
+      }
+
+    });
+
+  </script>
+
+</dom-module>
