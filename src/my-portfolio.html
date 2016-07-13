@@ -48,7 +48,6 @@
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
       }
-
       .drawer-list {
         margin: 0 20px;
       }
@@ -65,6 +64,13 @@
       }
       .drawer-list a.subroute {
         padding-left: 32px;
+      }
+      paper-listbox {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      .social-media-links {
+        padding-left: 0px !important;
       }
 
       @media screen and (max-width: 640px) {
@@ -94,6 +100,12 @@
                        role="navigation">
           <paper-item name="About">About Me</paper-item>
         </paper-listbox>
+
+        <paper-listbox class="drawer-list">
+          <paper-item><a href="https://github.com/joekarasek" target="_blank" class="social-media-links">GitHub</a></paper-item>
+          <paper-item><a href="www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links">LinkedIn</a></paper-item>
+        </paper-listbox>
+
         <h3>Projects</h3>
         <paper-listbox attr-for-selected="name"
                        class="drawer-list"
