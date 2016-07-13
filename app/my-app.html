@@ -50,15 +50,19 @@
       }
       app-drawer {
         --app-drawer-content-container: {
-          background-color: var(--primary-background-color);
+          background-color: var(--secondary-background-color);
         }
       }
       app-drawer h1,h3 {
         margin-left: 15px;
       }
       app-header {
-        background-color: var(--dark-primary-color);
-        color: #fff;
+        background-color: var(--primary-background-color);
+        height: 150px;
+        --app-header-background-rear-layer: {
+          /* The header is blue when condensed */
+          background-color: var(--secondary-background-color);
+        };
       }
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
@@ -92,6 +96,7 @@
       paper-listbox {
         padding-top: 0px;
         padding-bottom: 0px;
+        background-color: var(--secondary-background-color);
       }
       .social-media-links {
         padding-left: 0px !important;
@@ -115,7 +120,7 @@
 
     <app-header-layout fullbleed>
 
-      <app-header condenses reveals effects="waterfall">
+      <app-header condenses effects="waterfall resize-title blend-background parallax-background" height="300px">
         <app-toolbar>
           <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
           <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
