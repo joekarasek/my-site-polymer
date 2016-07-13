@@ -33,6 +33,17 @@
       :host {
         display: block;
       }
+      a {
+        color: var(--primary-text-color) !important;
+        text-decoration: none;
+      }
+      a:visited {
+        color: var(--primary-text-color);
+      }
+      a:hover {
+        color: var(--dark-primary-color);
+        text-decoration: underline;
+      }
       app-drawer {
         --app-drawer-content-container: {
           background-color: var(--primary-background-color);
@@ -64,6 +75,11 @@
       }
       .drawer-list a.subroute {
         padding-left: 32px;
+      }
+      .drawer__social-media-icon {
+        max-width: 18px;
+        max-height: 18px;
+        margin-right: 10px;
       }
       paper-listbox {
         padding-top: 0px;
@@ -102,8 +118,12 @@
         </paper-listbox>
 
         <paper-listbox class="drawer-list">
-          <paper-item><a href="https://github.com/joekarasek" target="_blank" class="social-media-links">GitHub</a></paper-item>
-          <paper-item><a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links">LinkedIn</a></paper-item>
+          <paper-item>
+            <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/images/GitHub-Mark-32px.png" alt="">GitHub</a>
+          </paper-item>
+          <paper-item>
+            <a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/images/LinkedIn-Mark-32px.svg" alt="">LinkedIn</a>
+          </paper-item>
         </paper-listbox>
 
         <h3>Projects</h3>
