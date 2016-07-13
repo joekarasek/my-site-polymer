@@ -111,49 +111,50 @@
 
     </style>
 
-    <app-drawer-layout fullbleed>
+    <app-header-layout fullbleed>
 
-      <!-- Drawer content -->
-      <app-drawer>
-        <h1>Joe Karasek</h1>
-        <paper-listbox attr-for-selected="name"
-                       class="drawer-list"
-                       selected="{{currentProject}}"
-                       role="navigation">
-          <paper-item name="About">About Me</paper-item>
-        </paper-listbox>
+      <app-header condenses reveals effects="waterfall">
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
+          <div class="drawer--revealed" title>[[currentProject]]</div>
+        </app-toolbar>
+      </app-header>
 
-        <paper-listbox class="drawer-list">
-          <paper-item>
-            <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/GitHub-Mark-32px.png" alt="">GitHub</a>
-          </paper-item>
-          <paper-item>
-            <a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/LinkedIn-Mark-32px.svg" alt="">LinkedIn</a>
-          </paper-item>
-        </paper-listbox>
-
-        <h3>Projects</h3>
-        <paper-listbox attr-for-selected="name"
-                       class="drawer-list"
-                       selected="{{currentProject}}"
-                       role="navigation">
-          <template is="dom-repeat"
-                    items="[[content.projects]]">
-            <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
-          </template>
-        </paper-listbox>
-      </app-drawer>
 
       <!-- Main content -->
-      <app-header-layout has-scrolling-region>
+      <app-drawer-layout has-scrolling-region>
 
-        <app-header condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
-            <div class="drawer--revealed" title>[[currentProject]]</div>
-          </app-toolbar>
-        </app-header>
+        <!-- Drawer content -->
+        <app-drawer>
+          <h1>Joe Karasek</h1>
+          <paper-listbox attr-for-selected="name"
+                         class="drawer-list"
+                         selected="{{currentProject}}"
+                         role="navigation">
+            <paper-item name="About">About Me</paper-item>
+          </paper-listbox>
+
+          <paper-listbox class="drawer-list">
+            <paper-item>
+              <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/GitHub-Mark-32px.png" alt="">GitHub</a>
+            </paper-item>
+            <paper-item>
+              <a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/LinkedIn-Mark-32px.svg" alt="">LinkedIn</a>
+            </paper-item>
+          </paper-listbox>
+
+          <h3>Projects</h3>
+          <paper-listbox attr-for-selected="name"
+                         class="drawer-list"
+                         selected="{{currentProject}}"
+                         role="navigation">
+            <template is="dom-repeat"
+                      items="[[content.projects]]">
+              <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
+            </template>
+          </paper-listbox>
+        </app-drawer>
 
         <iron-pages role="main"
                     selected="[[currentProject]]"
@@ -165,9 +166,9 @@
           </template>
         </iron-pages>
 
-      </app-header-layout>
+      </app-drawer-layout>
 
-    </app-drawer-layout>
+    </app-header-layout>
 
     <iron-ajax
             auto
