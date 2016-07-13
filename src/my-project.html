@@ -54,35 +54,35 @@
 
     <div class="card">
 
-      <h1>[[ project.title ]]</h1>
+      <h1>[[ project.attribute.title ]]</h1>
 
       <div class="content">
         <div class="content__main">
           <h3>Technologies Used</h3>
           <ul>
             <template is="dom-repeat"
-                      items="[[ project.tags ]]">
+                      items="[[ project.attributes.tags ]]">
               <li class="technology">[[ item ]]</li>
             </template>
           </ul>
 
           <template is="dom-if"
-                    if="[[ project.repo ]] || [[ project.demo ]] || [[ project.live ]]">
+                    if="[[ project.attributes.repo ]] || [[ project.attributes.demo ]] || [[ project.attributes.live ]]">
             <h3>Links</h3>
 
             <template is="dom-if"
-                      if="[[ project.live ]]">
-              <a href="[[ project.live ]]" target="_blank">Live Site</a>
+                      if="[[ project.attributes.live ]]">
+              <a href="[[ project.attributes.live ]]" target="_blank">Live Site</a>
             </template>
 
             <template is="dom-if"
-                      if="[[ project.repo ]]">
-              <a href="[[ project.repo ]]" target="_blank">GitHub</a>
+                      if="[[ project.attributes.repo ]]">
+              <a href="[[ project.attributes.repo ]]" target="_blank">GitHub</a>
             </template>
 
             <template is="dom-if"
-                      if="[[ project.demo ]]">
-              <a href="[[ project.demo ]]" target="_blank">Demo</a>
+                      if="[[ project.attributes.demo ]]">
+              <a href="[[ project.attributes.demo ]]" target="_blank">Demo</a>
             </template>
           </template>
 
@@ -90,23 +90,23 @@
           <p id="projectBody"></p>
 
           <template is="dom-if"
-                    if="[[ project.contributors ]]">
+                    if="[[ project.attributes.contributors ]]">
             <h3>Contributors</h3>
             <ul>
               <template is="dom-repeat"
-                        items="[[ project.contributors ]]">
-                <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+                        items="[[ project.attributes.contributors ]]">
+                <li>[[ item ]] <a href="[[ item ]]">GitHub</a></li>
               </template>
             </ul>
           </template>
         </div>
         <div class="content__side">
           <template is="dom-if"
-                    if="[[ project.imgs ]]">
+                    if="[[ project.attributes.imgs ]]">
             <h3>Images</h3>
             <template is="dom-repeat"
-                      items="[[ project.imgs ]]">
-              <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
+                      items="[[ project.attributes.imgs ]]">
+              <img src="/images/project_images/[[ item ]]" >
             </template>
           </template>
         </div>
@@ -126,17 +126,38 @@
 
       properties: {
         project: {
-          type: Object
+          type: Object,
+          value: {
+            "attributes": {
+              "title": "Rock Paper Scissors 7",
+              "layout": "project",
+              "teaser": "PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.",
+              "repo": "https://github.com/joekarasek/Advanced-RPS",
+              "demo": null,
+              "tags": [
+                "Php",
+                "PhpUnit",
+                "Silex",
+                "Twig",
+                "mySQL",
+                "Javascript"
+              ],
+              "contributors": [
+                "Michael Lor <a href=\"https://michaellor.github.io/\">GitHub</a>",
+                "Aundra Miller <a href=\"https://milleraundra.github.io/\">GitHub</a>",
+                "Nic Netzel <a href=\"https://netzeln.github.io/\">GitHub</a>"
+              ]
+            },
+            "body": "**Rock Paper Scissors 7** _is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: 'Air', 'Water', 'Fire', and 'Sponge' are added to the classic mix of 'Rock', 'Paper', and 'Scissors'. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players' results._\n\n_This application was completed as a capstone of the level 2 PHP course at [Epicodus](http://www.epicodus.com/). To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API._\n",
+            "frontmatter": "title: Rock Paper Scissors 7\nlayout: project\nteaser: PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.\nrepo: https://github.com/joekarasek/Advanced-RPS\ndemo:\ntags:\n  - Php\n  - PhpUnit\n  - Silex\n  - Twig\n  - mySQL\n  - Javascript\ncontributors:\n  - Michael Lor <a href=\"https://michaellor.github.io/\">GitHub</a>\n  - Aundra Miller <a href=\"https://milleraundra.github.io/\">GitHub</a>\n  - Nic Netzel <a href=\"https://netzeln.github.io/\">GitHub</a>",
+            "html": "<p><strong>Rock Paper Scissors 7</strong> <em>is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: &#39;Air&#39;, &#39;Water&#39;, &#39;Fire&#39;, and &#39;Sponge&#39; are added to the classic mix of &#39;Rock&#39;, &#39;Paper&#39;, and &#39;Scissors&#39;. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players&#39; results.</em></p>\n<p><em>This application was completed as a capstone of the level 2 PHP course at <a href=\"http://www.epicodus.com/\">Epicodus</a>. To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API.</em></p>\n"
+          }
         }
       },
 
       attached: function() {
-        this.$.projectBody.innerHTML = this.project.body;
-        console.log("Attached");
-        console.log(typeof $);
-        $.getJSON( "http://localhost:8080/src/content.json", function( data ) {
-          console.log("Got Stuff", data);
-        });
+        this.$.projectBody.innerHTML = this.project.html;
+        console.log("Attached", this.project);
       }
 
     });

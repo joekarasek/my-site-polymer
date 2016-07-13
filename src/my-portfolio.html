@@ -134,8 +134,8 @@
                        selected="{{currentProject}}"
                        role="navigation">
           <template is="dom-repeat"
-                    items="[[projects]]">
-            <paper-item name="[[ item.title ]]">[[ item.title ]]</paper-item>
+                    items="[[content.projects]]">
+            <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
           </template>
         </paper-listbox>
       </app-drawer>
@@ -156,8 +156,8 @@
                     attr-for-selected="name">
           <my-about name="About"></my-about>
           <template is="dom-repeat"
-                    items="[[projects]]">
-            <my-project name="[[ item.title ]]" project="[[ item ]]"></my-project>
+                    items="[[content.projects]]">
+            <my-project name="[[ item.attributes.title ]]" project="[[ item ]]"></my-project>
           </template>
         </iron-pages>
 
@@ -165,10 +165,12 @@
 
     </app-drawer-layout>
 
-    <iron-ajax auto
-               url="/src/content.json"
-               on-response="handleResponse"
-               last-response="{{content}}"></iron-ajax>
+    <iron-ajax
+            auto
+            url="/src/content.json"
+            on-response="handleResponse"
+            handle-as="json"
+            last-response="{{content}}"></iron-ajax>
 
   </template>
 
@@ -178,8 +180,8 @@
 
       is: 'my-portfolio',
 
-      ready: function() {
-        console.log(this.content);
+      handleResponse: function (response) {
+          console.log("Response",this.content);
       },
 
       properties: {
@@ -190,7 +192,9 @@
         },
         content: {
           type: Object,
-          value: null
+          value: {
+            projects: []
+          }
         },
         projects: {
           type: Object,
