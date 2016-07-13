@@ -29,13 +29,14 @@
         color: #757575;
         background-color: var(--secondary-background-color);
       }
+      .technologies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       .technology {
-        display: inline-block;
-        border-radius: 15%;
-        background: #ddd;
-        color: #555;
         text-align: center;
-        padding: 9px;
+        flex-basis: 49%;
       }
       img {
         max-width: 200px;
@@ -48,12 +49,12 @@
       <h1>[[ project.attribute.title ]]</h1>
 
       <h3>Technologies Used</h3>
-      <ul>
+      <div class="technologies">
         <template is="dom-repeat"
                   items="[[ project.attributes.tags ]]">
           <li class="technology">[[ item ]]</li>
         </template>
-      </ul>
+      </div>
 
       <template is="dom-if"
                 if="[[ project.attributes.repo ]] || [[ project.attributes.demo ]] || [[ project.attributes.live ]]">
