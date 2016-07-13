@@ -165,12 +165,10 @@
 
     </app-drawer-layout>
 
-    <iron-ajax
-            auto
-            url="/src/content.json"
-            on-response="handleResponse"
-            handle-as="json"
-            last-response="{{content}}"></iron-ajax>
+    <iron-ajax auto
+               url="/src/content.json"
+               on-response="handleResponse"
+               last-response="{{content}}"></iron-ajax>
 
   </template>
 
@@ -413,12 +411,8 @@
           ]
         }
 
-      },
-
-      handleResponse: function(response, x, y) {
-        console.log("The Response", response,x,y);
-        console.log("content is: ", this.content);
       }
+
     });
 
   </script>

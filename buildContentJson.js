@@ -16,6 +16,6 @@ glob('/Users/karasek/Dev/projects/my-site/_projects/**/*.md', function(er, files
         data.projects.push(fileData);
     });
     // console.log('all done', data);
-    fs.writeFileSync('./builtContent.json', JSON.stringify(data, null, '  '));
+    fs.writeFileSync('./src/content.json', JSON.stringify(data, null, '  '));
 });
 
