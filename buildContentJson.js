@@ -8,7 +8,7 @@ var data = {
     projects: []
 };
 
-glob('/Users/karasek/Dev/projects/polymerprojects/**/*.md', function(er, files) {
+glob('/Users/karasek/Dev/projects/polymer/app/resources/projects/**/*.md', function(er, files) {
     files.forEach(function(file) {
         var contents = fs.readFileSync(file, 'utf8');
         var fileData = fm(contents);
@@ -16,6 +16,6 @@ glob('/Users/karasek/Dev/projects/polymerprojects/**/*.md', function(er, files) 
         data.projects.push(fileData);
     });
     // console.log('all done', data);
-    fs.writeFileSync('./app/content.json', JSON.stringify(data, null, '  '));
+    fs.writeFileSync('./app/resources/content.json', JSON.stringify(data, null, '  '));
 });
 
