@@ -167,7 +167,7 @@
 
     <iron-ajax
             auto
-            url="/src/content.json"
+            url="/app/content.json"
             on-response="handleResponse"
             handle-as="json"
             last-response="{{content}}"></iron-ajax>
@@ -181,7 +181,7 @@
       is: 'my-portfolio',
 
       handleResponse: function (response) {
-          console.log("Response",this.content);
+//          console.log("Response",this.content);
       },
 
       properties: {
