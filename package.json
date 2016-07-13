@@ -1,0 +1,14 @@
+{
+  "name": "my-site",
+  "version": "3.0.0",
+  "description": "Web development portfolio for Joe Karasek",
+  "main": "service-worker.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Karasek",
+  "license": "ISC"
+}
