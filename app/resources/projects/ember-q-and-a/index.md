@@ -12,7 +12,7 @@ tags:
   - Firebase DB
   - Materialize
 imgs:
-  - screenshot1.jpg
+  - EQAscreenshot1.jpg
 ---
 This app is designed to function as a question and answer board. Users can create questions, edit and update questions, and delete questions. Users can also create and view multiple answers for each question (a one to many database relationship).
 
