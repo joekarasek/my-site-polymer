@@ -36,6 +36,16 @@
         text-align: center;
         padding: 9px;
       }
+      .content {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content__main {
+        width: 75%;
+      }
+      .content__side {
+        width: 24%;
+      }
       img {
         max-width: 300px;
         max-height: 400px;
@@ -46,57 +56,61 @@
 
       <h1>[[ project.title ]]</h1>
 
-      <h3>Technologies Used</h3>
-      <ul>
-        <template is="dom-repeat"
-                  items="[[ project.tags ]]">
-          <li class="technology">[[ item ]]</li>
-        </template>
-      </ul>
+      <div class="content">
+        <div class="content__main">
+          <h3>Technologies Used</h3>
+          <ul>
+            <template is="dom-repeat"
+                      items="[[ project.tags ]]">
+              <li class="technology">[[ item ]]</li>
+            </template>
+          </ul>
 
-      <template is="dom-if"
-                if="[[ project.repo ]] || [[ project.demo ]] || [[ project.live ]]">
-        <h3>Links</h3>
+          <template is="dom-if"
+                    if="[[ project.repo ]] || [[ project.demo ]] || [[ project.live ]]">
+            <h3>Links</h3>
 
-        <template is="dom-if"
-                  if="[[ project.live ]]">
-          <a href="[[ project.live ]]" target="_blank">Live Site</a>
-        </template>
+            <template is="dom-if"
+                      if="[[ project.live ]]">
+              <a href="[[ project.live ]]" target="_blank">Live Site</a>
+            </template>
 
-        <template is="dom-if"
-                  if="[[ project.repo ]]">
-          <a href="[[ project.repo ]]" target="_blank">GitHub</a>
-        </template>
+            <template is="dom-if"
+                      if="[[ project.repo ]]">
+              <a href="[[ project.repo ]]" target="_blank">GitHub</a>
+            </template>
 
-        <template is="dom-if"
-                  if="[[ project.demo ]]">
-          <a href="[[ project.demo ]]" target="_blank">Demo</a>
-        </template>
-      </template>
-
-
-      <template is="dom-if"
-                if="[[ project.imgs ]]">
-        <h3>Images</h3>
-        <template is="dom-repeat"
-                  items="[[ project.imgs ]]">
-          <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
-        </template>
-      </template>
-
-      <h3>Description</h3>
-      <p id="projectBody"></p>
-
-      <template is="dom-if"
-                if="[[ project.contributors ]]">
-        <h3>Contributors</h3>
-        <ul>
-          <template is="dom-repeat"
-                    items="[[ project.contributors ]]">
-            <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+            <template is="dom-if"
+                      if="[[ project.demo ]]">
+              <a href="[[ project.demo ]]" target="_blank">Demo</a>
+            </template>
           </template>
-        </ul>
-      </template>
+
+          <h3>Description</h3>
+          <p id="projectBody"></p>
+
+          <template is="dom-if"
+                    if="[[ project.contributors ]]">
+            <h3>Contributors</h3>
+            <ul>
+              <template is="dom-repeat"
+                        items="[[ project.contributors ]]">
+                <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+              </template>
+            </ul>
+          </template>
+        </div>
+        <div class="content__side">
+          <template is="dom-if"
+                    if="[[ project.imgs ]]">
+            <h3>Images</h3>
+            <template is="dom-repeat"
+                      items="[[ project.imgs ]]">
+              <img src="/images/project_images/[[ item ]]" alt="[[ project.title ]]">
+            </template>
+          </template>
+        </div>
+      </div>
     </div>
 
   </template>
