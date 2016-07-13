@@ -131,8 +131,12 @@
       },
 
       attached: function() {
-        console.log(this.$);
         this.$.projectBody.innerHTML = this.project.body;
+        console.log("Attached");
+        console.log(typeof $);
+        $.getJSON( "http://localhost:8080/src/content.json", function( data ) {
+          console.log("Got Stuff", data);
+        });
       }
 
     });

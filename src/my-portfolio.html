@@ -17,6 +17,7 @@
 
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
 <link rel="import" href="my-icons.html">
 
@@ -164,6 +165,13 @@
 
     </app-drawer-layout>
 
+    <iron-ajax
+            auto
+            url="/src/content.json"
+            on-response="handleResponse"
+            handle-as="json"
+            last-response="{{content}}"></iron-ajax>
+
   </template>
 
   <script>
@@ -172,11 +180,19 @@
 
       is: 'my-portfolio',
 
+      ready: function() {
+        console.log(this.content);
+      },
+
       properties: {
 
         currentProject: {
           type: String,
           value: "About"
+        },
+        content: {
+          type: Object,
+          value: null
         },
         projects: {
           type: Object,
@@ -397,6 +413,11 @@
           ]
         }
 
+      },
+
+      handleResponse: function(response, x, y) {
+        console.log("The Response", response,x,y);
+        console.log("content is: ", this.content);
       }
     });
 
