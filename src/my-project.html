@@ -55,8 +55,13 @@
       </ul>
 
       <template is="dom-if"
-                if="[[ project.repo ]] || [[ project.demo ]]">
+                if="[[ project.repo ]] || [[ project.demo ]] || [[ project.live ]]">
         <h3>Links</h3>
+
+        <template is="dom-if"
+                  if="[[ project.live ]]">
+          <a href="[[ project.live ]]" target="_blank">Live Site</a>
+        </template>
 
         <template is="dom-if"
                   if="[[ project.repo ]]">
