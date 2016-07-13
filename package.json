@@ -1,6 +1,6 @@
 {
   "name": "my-site",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Web development portfolio for Joe Karasek",
   "main": "service-worker.js",
   "directories": {
