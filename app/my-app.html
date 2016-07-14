@@ -77,10 +77,6 @@
         text-decoration: none;
         color: var(--app-secondary-color);
       }
-      .drawer-list a.iron-selected {
-        color: black;
-        font-weight: bold;
-      }
       .drawer-list a.subroute {
         padding-left: 32px;
       }
@@ -98,23 +94,31 @@
         padding-bottom: 0px;
         background-color: var(--secondary-background-color);
       }
+      paper-item {
+        cursor: pointer;
+      }
+      paper-item:not(.social-media-links) {
+        --paper-item-selected: {
+          background-color: rgba(0,0,0,0.2);
+        }
+      }
+      paper-item:hover {
+        background-color: rgba(0,0,0,0.1);
+      }
       .social-media-links {
         padding-left: 0px !important;
       }
-
       @media screen and (max-width: 640px) {
         .drawer--revealed {
           display: none;
         }
       }
-
       /* break point for drawer auto-hide */
       @media screen and (min-width: 640px) {
         .drawer--collapsed {
           display: none;
         }
       }
-
 
     </style>
 
@@ -143,6 +147,7 @@
           </paper-listbox>
 
           <paper-listbox class="drawer-list">
+            <!--TODO add custom js to remove the iron-selected class after click-->
             <paper-item>
               <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/GitHub-Mark-32px.png" alt="">GitHub</a>
             </paper-item>
