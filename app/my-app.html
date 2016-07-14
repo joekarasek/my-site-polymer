@@ -85,9 +85,22 @@
         max-height: 18px;
         margin-right: 10px;
       }
+      .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
       my-project {
         margin-left: auto;
         margin-right: auto;
+      }
+      .name-logo {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .name-logo h1, h3 {
+        margin: 0px 0px;
       }
       paper-listbox {
         padding-top: 0px;
@@ -104,6 +117,9 @@
       }
       paper-item:hover {
         background-color: rgba(0,0,0,0.1);
+      }
+      paper-icon-button {
+        float: left;
       }
       .social-media-links {
         padding-left: 0px !important;
@@ -125,11 +141,15 @@
     <app-header-layout fullbleed>
 
       <app-header condenses effects="waterfall resize-title blend-background parallax-background" height="300px">
-        <app-toolbar>
-          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+        <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+        <div class="header-wrapper">
+
           <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
-          <div class="drawer--revealed" title>[[currentProject]]</div>
-        </app-toolbar>
+          <div class="drawer--revealed name-logo" title>
+            <h1>Joe Karasek</h1>
+            <h3>Web Developer</h3>
+          </div>
+        </div>
       </app-header>
 
 
@@ -138,7 +158,10 @@
 
         <!-- Drawer content -->
         <app-drawer>
-          <h1>Joe Karasek</h1>
+          <div class="name-logo" title>
+            <h1>Joe Karasek</h1>
+            <h3>Web Developer</h3>
+          </div>
           <paper-listbox attr-for-selected="name"
                          class="drawer-list"
                          selected="{{currentProject}}"
