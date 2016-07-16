@@ -91,6 +91,11 @@
         justify-content: center;
         text-align: center;
       }
+      #drawer__projects-section-header {
+        margin-top: 70px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
       my-project {
         margin-left: auto;
         margin-right: auto;
@@ -162,6 +167,19 @@
             <h1>Joe Karasek</h1>
             <h3>Web Developer</h3>
           </div>
+
+          <h3 id="drawer__projects-section-header">Projects</h3>
+          <paper-listbox attr-for-selected="name"
+                         class="drawer-list"
+                         selected="{{currentProject}}"
+                         role="navigation">
+            <template is="dom-repeat"
+                      items="[[content.projects]]">
+              <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
+            </template>
+          </paper-listbox>
+
+          <!--About Me Button-->
           <paper-listbox attr-for-selected="name"
                          class="drawer-list"
                          selected="{{currentProject}}"
@@ -169,6 +187,7 @@
             <paper-item name="About">About Me</paper-item>
           </paper-listbox>
 
+          <!--Social Media Links-->
           <paper-listbox class="drawer-list">
             <!--TODO add custom js to remove the iron-selected class after click-->
             <paper-item>
@@ -179,16 +198,6 @@
             </paper-item>
           </paper-listbox>
 
-          <h3>Projects</h3>
-          <paper-listbox attr-for-selected="name"
-                         class="drawer-list"
-                         selected="{{currentProject}}"
-                         role="navigation">
-            <template is="dom-repeat"
-                      items="[[content.projects]]">
-              <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
-            </template>
-          </paper-listbox>
         </app-drawer>
 
         <iron-pages role="main"
