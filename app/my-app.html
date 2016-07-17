@@ -143,6 +143,23 @@
 
     </style>
 
+    <!--Routing-->
+    <app-location route="{{route}}"></app-location>
+
+    <app-route
+            route="{{route}}"
+            pattern="/:view"
+            data="{{routeData}}"
+            tail="{{subroute}}"></app-route>
+
+    <!--Ajax for content.json, which contains all the information for projects generated from markdown-->
+    <iron-ajax
+            auto
+            url="/app/resources/content.json"
+            handle-as="json"
+            last-response="{{content}}"></iron-ajax>
+
+
     <app-header-layout fullbleed>
 
       <app-header condenses effects="waterfall resize-title blend-background parallax-background" height="300px">
@@ -157,8 +174,7 @@
         </div>
       </app-header>
 
-
-      <!-- Main content -->
+      <!-- Drawer + Main content -->
       <app-drawer-layout has-scrolling-region>
 
         <!-- Drawer content -->
@@ -169,12 +185,14 @@
           </div>
 
           <h3 id="drawer__projects-section-header">Projects</h3>
-          <paper-listbox attr-for-selected="name"
-                         class="drawer-list"
-                         selected="{{currentProject}}"
-                         role="navigation">
-            <template is="dom-repeat"
-                      items="[[content.projects]]">
+          <paper-listbox
+                  attr-for-selected="name"
+                  class="drawer-list"
+                  selected="{{routeData.view}}"
+                  role="navigation">
+            <template
+                    is="dom-repeat"
+                    items="[[content.projects]]">
               <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
             </template>
           </paper-listbox>
@@ -182,9 +200,9 @@
           <!--About Me Button-->
           <paper-listbox attr-for-selected="name"
                          class="drawer-list"
-                         selected="{{currentProject}}"
+                         selected="{{routeData.view}}"
                          role="navigation">
-            <paper-item name="About">About Me</paper-item>
+            <paper-item name="">About Me</paper-item>
           </paper-listbox>
 
           <!--Social Media Links-->
@@ -201,9 +219,9 @@
         </app-drawer>
 
         <iron-pages role="main"
-                    selected="[[currentProject]]"
+                    selected="[[routeData.view]]"
                     attr-for-selected="name">
-          <my-about name="About"></my-about>
+          <my-about name=""></my-about>
           <template is="dom-repeat"
                     items="[[content.projects]]">
             <my-project name="[[ item.attributes.title ]]" project="[[ item ]]"></my-project>
@@ -214,13 +232,6 @@
 
     </app-header-layout>
 
-    <iron-ajax
-            auto
-            url="/app/resources/content.json"
-            on-response="handleResponse"
-            handle-as="json"
-            last-response="{{content}}"></iron-ajax>
-
   </template>
 
   <script>
@@ -228,10 +239,6 @@
     Polymer({
 
       is: 'my-app',
-
-      handleResponse: function (response) {
-//          console.log("Response",this.content);
-      },
 
       properties: {
 
