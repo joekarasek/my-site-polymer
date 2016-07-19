@@ -49,9 +49,10 @@
         text-decoration: underline;
       }
       app-drawer {
+        --app-drawer-width: 315px;
         --app-drawer-content-container: {
           background-color: var(--secondary-background-color);
-        }
+        };
       }
       app-drawer h1,h3 {
         margin-left: 15px;
@@ -115,6 +116,24 @@
         font-size: 50px;
       }
       .name-logo h3 {
+        color: var(--secondary-text-color);
+        margin-top: -15px;
+      }
+      .name-logo--drawer {
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
+      }
+      .name-logo--drawer h1, h3 {
+        color: var(--primary-text-color);
+        margin: 0px 0px;
+      }
+      .name-logo--drawer h1 {
+        font-size: 50px;
+      }
+      .name-logo--drawer h3 {
         margin-top: -15px;
       }
       paper-listbox {
@@ -189,7 +208,7 @@
 
         <!-- Drawer content -->
         <app-drawer>
-          <div class="name-logo" title>
+          <div class="name-logo--drawer" title>
             <h1>Joe Karasek</h1>
             <h3>Web Developer</h3>
           </div>
