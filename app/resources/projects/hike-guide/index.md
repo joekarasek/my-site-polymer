@@ -2,6 +2,7 @@
 title: H?ke
 layout: project
 teaser: Hiking guide with live weather information and google maps.
+permalink: HikeGuide
 repo: https://github.com/joekarasek/epicodus-hike-guide
 demo: http://hike-portland.herokuapp.com
 tags:

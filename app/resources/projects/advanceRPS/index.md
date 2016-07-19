@@ -2,6 +2,7 @@
 title: Rock Paper Scissors 7
 layout: project
 teaser: PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.
+permalink: RockPaperScissors7
 repo: https://github.com/joekarasek/Advanced-RPS
 demo:
 tags:

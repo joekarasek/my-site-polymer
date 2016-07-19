@@ -2,6 +2,7 @@
 title: Sportal
 layout: project
 teaser: This is a site that connects users with places to play recreational sports!
+permalink: Sportal
 repo: https://github.com/joekarasek/Sportal-Drupal
 demo: http://www.sportalusa.us/
 tags:
