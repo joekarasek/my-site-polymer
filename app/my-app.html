@@ -48,10 +48,17 @@
         color: var(--dark-primary-color);
         text-decoration: underline;
       }
+      #about-me--paper-item {
+        padding-left: 0px;
+        margin-top: 30px;
+        font-size: 22px;
+        font-weight: 900;
+      }
       app-drawer {
+        --app-drawer-width: 315px;
         --app-drawer-content-container: {
           background-color: var(--secondary-background-color);
-        }
+        };
       }
       app-drawer h1,h3 {
         margin-left: 15px;
@@ -68,7 +75,7 @@
         --paper-icon-button-ink-color: white;
       }
       .drawer-list {
-        margin: 0 20px;
+        margin: 0 30px;
       }
       .drawer-list a {
         display: block;
@@ -93,19 +100,48 @@
       }
       #drawer__projects-section-header {
         margin-top: 70px;
-        margin-left: 20px;
-        margin-bottom: 10px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        font-size: 24px;
       }
       my-project {
         margin-left: auto;
         margin-right: auto;
       }
       .name-logo {
-        text-align: center;
-        margin-top: 30px;
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
       }
       .name-logo h1, h3 {
+        color: var(--secondary-text-color);
         margin: 0px 0px;
+      }
+      .name-logo h1 {
+        font-size: 50px;
+      }
+      .name-logo h3 {
+        color: var(--secondary-text-color);
+        margin-top: -15px;
+      }
+      .name-logo--drawer {
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
+      }
+      .name-logo--drawer h1, h3 {
+        color: var(--primary-text-color);
+        margin: 0px 0px;
+      }
+      .name-logo--drawer h1 {
+        font-size: 50px;
+      }
+      .name-logo--drawer h3 {
+        margin-top: -15px;
       }
       paper-listbox {
         padding-top: 0px;
@@ -114,6 +150,8 @@
       }
       paper-item {
         cursor: pointer;
+        padding-left: 30px;
+        font-family: 'Ubuntu', 'Noto', sans-serif;
       }
       paper-item:not(.social-media-links) {
         --paper-item-selected: {
@@ -163,7 +201,7 @@
     <app-header-layout fullbleed>
 
       <app-header condenses effects="waterfall resize-title blend-background parallax-background" height="300px">
-        <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+        <!--<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>-->
         <div class="header-wrapper">
 
           <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
@@ -179,7 +217,7 @@
 
         <!-- Drawer content -->
         <app-drawer>
-          <div class="name-logo" title>
+          <div class="name-logo--drawer" title>
             <h1>Joe Karasek</h1>
             <h3>Web Developer</h3>
           </div>
@@ -202,7 +240,7 @@
                          class="drawer-list"
                          selected="{{routeData.view}}"
                          role="navigation">
-            <paper-item name="">About Me</paper-item>
+            <paper-item name="" id="about-me--paper-item">About Me</paper-item>
           </paper-listbox>
 
           <!--Social Media Links-->
