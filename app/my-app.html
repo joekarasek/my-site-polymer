@@ -101,11 +101,21 @@
         margin-right: auto;
       }
       .name-logo {
-        text-align: center;
-        margin-top: 30px;
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
       }
       .name-logo h1, h3 {
+        color: var(--secondary-text-color);
         margin: 0px 0px;
+      }
+      .name-logo h1 {
+        font-size: 50px;
+      }
+      .name-logo h3 {
+        margin-top: -15px;
       }
       paper-listbox {
         padding-top: 0px;
@@ -163,7 +173,7 @@
     <app-header-layout fullbleed>
 
       <app-header condenses effects="waterfall resize-title blend-background parallax-background" height="300px">
-        <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+        <!--<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>-->
         <div class="header-wrapper">
 
           <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
