@@ -193,7 +193,7 @@
             <template
                     is="dom-repeat"
                     items="[[content.projects]]">
-              <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
+              <paper-item name="[[ item.attributes.permalink ]]">[[ item.attributes.title ]]</paper-item>
             </template>
           </paper-listbox>
 
@@ -224,7 +224,7 @@
           <my-about name=""></my-about>
           <template is="dom-repeat"
                     items="[[content.projects]]">
-            <my-project name="[[ item.attributes.title ]]" project="[[ item ]]"></my-project>
+            <my-project name="[[ item.attributes.permalink ]]" project="[[ item ]]"></my-project>
           </template>
         </iron-pages>
 
