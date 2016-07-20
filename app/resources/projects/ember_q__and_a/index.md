@@ -2,7 +2,7 @@
 title: Ember Q and A
 layout: project
 teaser: Ember.js based Question and Answer board.
-
+permalink: EmberQandA
 repo: https://github.com/joekarasek/epicodus-ember-QandA
 demo: http://joekarasek.github.io/epicodus-ember-QandA
 tags:

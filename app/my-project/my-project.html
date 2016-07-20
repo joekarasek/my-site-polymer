@@ -13,23 +13,26 @@
         max-width: 780px;
       }
       a {
-        color: var(--dark-primary-color) !important;
+        color: var(--secondary-text-color) !important;
         text-decoration: none;
       }
       a:visited {
         color: var(--default-primary-color);
       }
       a:hover {
-        color: var(--dark-primary-color);
+        color: var(--default-primary-color);
         text-decoration: underline;
       }
       .card {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        padding: 26px;
+        padding-top: 3px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
         margin: 24px;
         border-radius: 5px;
-        color: #757575;
-        background-color: var(--secondary-background-color);
+        color: var(--secondary-text-color);
+        background-color: var(--primary-background-color);
       }
       .project__title__wrapper {
         display: flex;
@@ -91,19 +94,28 @@
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.live ]]">
-              <a href="[[ project.attributes.live ]]" target="_blank">Live Site</a>
+              <a href="[[ project.attributes.live ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Live Site
+              </a>
             </template>
           </li>
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.repo ]]">
-              <a href="[[ project.attributes.repo ]]" target="_blank"><img class="project__link-icon" src="/app/resources/images/GitHub-Mark-32px.svg" alt="">GitHub</a>
+              <a href="[[ project.attributes.repo ]]" target="_blank">
+                <img class="project__link-icon" src="/app/resources/images/GitHub-Mark-32px.svg" alt="">
+                GitHub
+              </a>
             </template>
           </li>
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.demo ]]">
-              <a href="[[ project.attributes.demo ]]" target="_blank"><iron-icon class="project__link-icon" icon="device:devices"></iron-icon> Demo</a>
+              <a href="[[ project.attributes.demo ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Demo
+              </a>
             </template>
           </li>
         </ul>
@@ -116,26 +128,6 @@
           <li class="technology">[[ item ]]</li>
         </template>
       </div>
-
-      <template is="dom-if"
-                if="[[ project.attributes.repo ]] || [[ project.attributes.demo ]] || [[ project.attributes.live ]]">
-        <h3>Links</h3>
-
-        <template is="dom-if"
-                  if="[[ project.attributes.live ]]">
-          <a href="[[ project.attributes.live ]]" target="_blank">Live Site</a>
-        </template>
-
-        <template is="dom-if"
-                  if="[[ project.attributes.repo ]]">
-          <a href="[[ project.attributes.repo ]]" target="_blank">GitHub</a>
-        </template>
-
-        <template is="dom-if"
-                  if="[[ project.attributes.demo ]]">
-          <a href="[[ project.attributes.demo ]]" target="_blank">Demo</a>
-        </template>
-      </template>
 
       <h3>Description</h3>
       <p id="projectBody"></p>
