@@ -209,10 +209,38 @@
             "name": "Blake Scott",
             "link": "https://github.com/blakerscott"
           }
+        ],
+        "imgs": [
+          "SPscreenshot1.jpg",
+          "SPscreenshot2.jpg",
+          "SPscreenshot3.jpg",
+          "SPscreenshot4.jpg"
         ]
       },
       "body": "_**Sportal**_ is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.\n",
-      "frontmatter": "title: Sportal\nlayout: project\nteaser: This is a site that connects users with places to play recreational sports!\npermalink: Sportal\nrepo: https://github.com/joekarasek/Sportal-Drupal\ndemo: http://www.sportalusa.us/\ntags:\n  - PHP\n  - Drupal 7\ncontributors:\n  -\n    name: Alex Fallenstedt\n    link: https://github.com/Fallenstedt\n  -\n    name: Adam Ross Russell\n    link: https://github.com/adamrr724\n  -\n    name: Aundra Miller\n    link: https://github.com/milleraundra\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Blake Scott\n    link: https://github.com/blakerscott",
+      "frontmatter": "title: Sportal\nlayout: project\nteaser: This is a site that connects users with places to play recreational sports!\npermalink: Sportal\nrepo: https://github.com/joekarasek/Sportal-Drupal\ndemo: http://www.sportalusa.us/\ntags:\n  - PHP\n  - Drupal 7\ncontributors:\n  -\n    name: Alex Fallenstedt\n    link: https://github.com/Fallenstedt\n  -\n    name: Adam Ross Russell\n    link: https://github.com/adamrr724\n  -\n    name: Aundra Miller\n    link: https://github.com/milleraundra\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Blake Scott\n    link: https://github.com/blakerscott\nimgs:\n  - SPscreenshot1.jpg\n  - SPscreenshot2.jpg\n  - SPscreenshot3.jpg\n  - SPscreenshot4.jpg",
+      "html": "<p><em><strong>Sportal</strong></em> is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.</p>\n"
+    },
+    {
+      "attributes": {
+        "title": "Zeppidy - Market Trends",
+        "layout": "project",
+        "teaser": "Explore real estate market trends through charts, graphics, and maps.",
+        "permalink": "Zeppidy",
+        "live": "http://www.zeppidy.com/",
+        "tags": [
+          "PHP",
+          "Drupal 7"
+        ],
+        "imgs": [
+          "ZMTscreenshot1.jpg",
+          "ZMTscreenshot2.jpg",
+          "ZMTscreenshot3.jpg",
+          "ZMTscreenshot4.jpg"
+        ]
+      },
+      "body": "_**Sportal**_ is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.\n",
+      "frontmatter": "title: Zeppidy - Market Trends\nlayout: project\nteaser: Explore real estate market trends through charts, graphics, and maps.\npermalink: Zeppidy\nlive: http://www.zeppidy.com/\ntags:\n  - PHP\n  - Drupal 7\nimgs:\n  - ZMTscreenshot1.jpg\n  - ZMTscreenshot2.jpg\n  - ZMTscreenshot3.jpg\n  - ZMTscreenshot4.jpg",
       "html": "<p><em><strong>Sportal</strong></em> is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.</p>\n"
     }
   ]

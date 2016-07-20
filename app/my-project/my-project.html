@@ -94,19 +94,28 @@
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.live ]]">
-              <a href="[[ project.attributes.live ]]" target="_blank">Live Site</a>
+              <a href="[[ project.attributes.live ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Live Site
+              </a>
             </template>
           </li>
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.repo ]]">
-              <a href="[[ project.attributes.repo ]]" target="_blank"><img class="project__link-icon" src="/app/resources/images/GitHub-Mark-32px.svg" alt="">GitHub</a>
+              <a href="[[ project.attributes.repo ]]" target="_blank">
+                <img class="project__link-icon" src="/app/resources/images/GitHub-Mark-32px.svg" alt="">
+                GitHub
+              </a>
             </template>
           </li>
           <li class="project__link">
             <template is="dom-if"
                       if="[[ project.attributes.demo ]]">
-              <a href="[[ project.attributes.demo ]]" target="_blank"><iron-icon class="project__link-icon" icon="device:devices"></iron-icon> Demo</a>
+              <a href="[[ project.attributes.demo ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Demo
+              </a>
             </template>
           </li>
         </ul>
