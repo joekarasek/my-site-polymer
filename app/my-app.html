@@ -51,7 +51,6 @@
       #about-me--paper-item {
         padding-left: 0px;
         margin-top: 30px;
-        font-size: 22px;
         font-weight: 900;
       }
       app-drawer {
@@ -61,7 +60,6 @@
         };
       }
       app-drawer h1,h3 {
-        margin-left: 15px;
       }
       app-header {
         background-color: var(--primary-background-color);
@@ -99,10 +97,9 @@
         text-align: center;
       }
       #drawer__projects-section-header {
-        margin-top: 70px;
+        margin-top: 90px;
         margin-left: 30px;
-        margin-bottom: 0px;
-        font-size: 24px;
+        margin-bottom: 5px;
       }
       my-project {
         margin-left: auto;
@@ -222,7 +219,8 @@
             <h3>Web Developer</h3>
           </div>
 
-          <h3 id="drawer__projects-section-header">Projects</h3>
+          <h1 id="drawer__projects-section-header">Projects</h1>
+
           <paper-listbox
                   attr-for-selected="name"
                   class="drawer-list"
@@ -231,7 +229,7 @@
             <template
                     is="dom-repeat"
                     items="[[content.projects]]">
-              <paper-item name="[[ item.attributes.title ]]">[[ item.attributes.title ]]</paper-item>
+              <paper-item name="[[ item.attributes.permalink ]]">[[ item.attributes.title ]]</paper-item>
             </template>
           </paper-listbox>
 
@@ -240,17 +238,29 @@
                          class="drawer-list"
                          selected="{{routeData.view}}"
                          role="navigation">
-            <paper-item name="" id="about-me--paper-item">About Me</paper-item>
+            <paper-item name="" id="about-me--paper-item"><h1>About Me</h1></paper-item>
           </paper-listbox>
 
           <!--Social Media Links-->
           <paper-listbox class="drawer-list">
             <!--TODO add custom js to remove the iron-selected class after click-->
             <paper-item>
-              <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/GitHub-Mark-32px.png" alt="">GitHub</a>
+              <a href="https://github.com/joekarasek"
+                 target="_blank"
+                 class="social-media-links">
+                <img class="drawer__social-media-icon"
+                     src="/app/resources/images/GitHub-Mark-32px.png"
+                     alt="">GitHub
+              </a>
             </paper-item>
             <paper-item>
-              <a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/app/resources/images/LinkedIn-Mark-32px.svg" alt="">LinkedIn</a>
+              <a href="http://www.linkedin.com/in/joe-karasek"
+                 target="_blank"
+                 class="social-media-links">
+                <img class="drawer__social-media-icon"
+                     src="/app/resources/images/LinkedIn-Mark-32px.svg"
+                     alt="">LinkedIn
+              </a>
             </paper-item>
           </paper-listbox>
 
@@ -262,7 +272,7 @@
           <my-about name=""></my-about>
           <template is="dom-repeat"
                     items="[[content.projects]]">
-            <my-project name="[[ item.attributes.title ]]" project="[[ item ]]"></my-project>
+            <my-project name="[[ item.attributes.permalink ]]" project="[[ item ]]"></my-project>
           </template>
         </iron-pages>
 

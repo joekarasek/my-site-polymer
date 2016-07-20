@@ -2,6 +2,7 @@
 title: Sportal
 layout: project
 teaser: This is a site that connects users with places to play recreational sports!
+permalink: Sportal
 repo: https://github.com/joekarasek/Sportal-Drupal
 demo: http://www.sportalusa.us/
 tags:
@@ -23,5 +24,10 @@ contributors:
   -
     name: Blake Scott
     link: https://github.com/blakerscott
+imgs:
+  - SPscreenshot1.jpg
+  - SPscreenshot2.jpg
+  - SPscreenshot3.jpg
+  - SPscreenshot4.jpg
 ---
 _**Sportal**_ is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.

@@ -2,6 +2,7 @@
 title: pdxRoasted
 layout: project
 teaser: Search for coffees roasted in Portland by flavor profile.
+permalink: pdxRoasted
 repo: https://github.com/joekarasek/pdxRoasted.git
 demo: null
 tags:

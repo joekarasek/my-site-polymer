@@ -2,6 +2,7 @@
 title: Mazes
 layout: project
 teaser: Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.
+permalink: MazeGenerator
 repo: https://github.com/joekarasek/mazes.git
 demo: http://joekarasek.github.io/mazes/
 tags:
