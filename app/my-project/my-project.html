@@ -48,6 +48,12 @@
       .project__title {
         width: 310px;
       }
+      .project__title h1 {
+        margin-bottom: 0px;
+      }
+      .project__title p {
+        margin-top: 0px;
+      }
       .project__link {
         display: inline-block;
       }
@@ -89,6 +95,7 @@
       <div class="project__title__wrapper">
         <div class="project__title">
           <h1>[[ project.attributes.title ]]</h1>
+          <p>[[ project.attributes.dates ]]</p>
         </div>
         <ul>
           <li class="project__link">
@@ -131,7 +138,6 @@
 
       <h3>Description</h3>
       <p id="projectBody"></p>
-      <p>Dates:  [[ project.attributes.dates ]]</p>
 
       <template is="dom-if"
                 if="[[ project.attributes.contributors ]]">

@@ -10,7 +10,7 @@ var moment = require('moment');
 var dateHelper = function(startDate, endDate) {
     var dateString = "";
     dateString += startDate ? moment(startDate).format("MMM Do 'YY") : "";
-    dateString += endDate ? " - " + moment(endDate).format("MMM Do 'YY") : "";
+    dateString += endDate ? " - " + moment(endDate).format("MMM Do 'YY") : " - present";
     return dateString;
 };
 
