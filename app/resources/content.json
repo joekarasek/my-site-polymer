@@ -4,6 +4,8 @@
       "attributes": {
         "title": "Rock Paper Scissors 7",
         "layout": "project",
+        "startDate": "2016-03-07T00:00:00.000Z",
+        "endDate": "2016-03-11T00:00:00.000Z",
         "teaser": "PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.",
         "permalink": "RockPaperScissors7",
         "repo": "https://github.com/joekarasek/Advanced-RPS",
@@ -29,16 +31,19 @@
             "name": "Nic Netzel",
             "link": "https://netzeln.github.io/"
           }
-        ]
+        ],
+        "dates": "Mar 6th '16 - Mar 10th '16"
       },
-      "body": "**Rock Paper Scissors 7** _is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: 'Air', 'Water', 'Fire', and 'Sponge' are added to the classic mix of 'Rock', 'Paper', and 'Scissors'. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players' results._\n\n_This application was completed as a capstone of the level 2 PHP course at [Epicodus](http://www.epicodus.com/). To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API._\n",
-      "frontmatter": "title: Rock Paper Scissors 7\nlayout: project\nteaser: PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.\npermalink: RockPaperScissors7\nrepo: https://github.com/joekarasek/Advanced-RPS\ndemo:\ntags:\n  - Php\n  - PhpUnit\n  - Silex\n  - Twig\n  - mySQL\n  - Javascript\ncontributors:\n  -\n    name: Michael Lor\n    link: https://michaellor.github.io/\n  -\n    name: Aundra Miller\n    link: https://milleraundra.github.io/\n  -\n    name: Nic Netzel\n    link: https://netzeln.github.io/",
-      "html": "<p><strong>Rock Paper Scissors 7</strong> <em>is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: &#39;Air&#39;, &#39;Water&#39;, &#39;Fire&#39;, and &#39;Sponge&#39; are added to the classic mix of &#39;Rock&#39;, &#39;Paper&#39;, and &#39;Scissors&#39;. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players&#39; results.</em></p>\n<p><em>This application was completed as a capstone of the level 2 PHP course at <a href=\"http://www.epicodus.com/\">Epicodus</a>. To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API.</em></p>\n"
+      "body": "_**Rock Paper Scissors 7**_ is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: 'Air', 'Water', 'Fire', and 'Sponge' are added to the classic mix of 'Rock', 'Paper', and 'Scissors'. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players' results.\n\nThis application was completed as a capstone of the level 2 PHP course at [Epicodus](http://www.epicodus.com/). To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API.\n",
+      "frontmatter": "title: Rock Paper Scissors 7\nlayout: project\nstartDate: 2016-03-07\nendDate: 2016-03-11\nteaser: PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.\npermalink: RockPaperScissors7\nrepo: https://github.com/joekarasek/Advanced-RPS\ndemo:\ntags:\n  - Php\n  - PhpUnit\n  - Silex\n  - Twig\n  - mySQL\n  - Javascript\ncontributors:\n  -\n    name: Michael Lor\n    link: https://michaellor.github.io/\n  -\n    name: Aundra Miller\n    link: https://milleraundra.github.io/\n  -\n    name: Nic Netzel\n    link: https://netzeln.github.io/",
+      "html": "<p><em><strong>Rock Paper Scissors 7</strong></em> is an PHP/Silex based web-app game developed by a team of 4 developers over the course of one week. This application allows users to play a version of Rock, Paper, Scissors that has 7 instead of 3 choices: &#39;Air&#39;, &#39;Water&#39;, &#39;Fire&#39;, and &#39;Sponge&#39; are added to the classic mix of &#39;Rock&#39;, &#39;Paper&#39;, and &#39;Scissors&#39;. Game modes include Freeplay, Best of 1, Best of 3, Best of 5, Best of 7, and Best of 73. Users can create an account, sign-in, and sign-out. Game statistics are stored and players can see their stats, compare their stats to the computer, and view a leaderboard of all players&#39; results.</p>\n<p>This application was completed as a capstone of the level 2 PHP course at <a href=\"http://www.epicodus.com/\">Epicodus</a>. To build this web-app, we applied our newly gained knowledge of PHP, the Silex framework, phpUnit, and mySQL. We also used a range of css frameworks and the Google Charts API.</p>\n"
     },
     {
       "attributes": {
         "title": "Bustle Clone",
         "layout": "project",
+        "startDate": "2016-03-30T00:00:00.000Z",
+        "endDate": "2016-03-31T00:00:00.000Z",
         "permalink": "BustleClone",
         "teaser": "A mock version of the news site Bustle built in one day in Ember.",
         "repo": "https://github.com/joekarasek/Advanced-RPS",
@@ -56,39 +61,44 @@
         ],
         "imgs": [
           "BCscreenshot1.jpg"
-        ]
+        ],
+        "dates": "Mar 29th '16 - Mar 30th '16"
       },
       "body": "This one-day project is designed to look like the news site bustle and was done to practice use of the Ember.js framework. Users can see a list of article preview titles, click on an article to be taken to its page, and use the navbar to navigate. An 'admin' can create, update, and delete articles (no authentication in place at this time).\n",
-      "frontmatter": "title: Bustle Clone\nlayout: project\npermalink: BustleClone\nteaser: A mock version of the news site Bustle built in one day in Ember.\nrepo: https://github.com/joekarasek/Advanced-RPS\ndemo: http://joekarasek.github.io/epicodus-ember-bustle/\ntags:\n  - Javascript\n  - Ember.js\n  - Firebase DB\ncontributors:\n  -\n    name: Brooke Hurford\n    link: https://github.com/brookehurford\nimgs:\n  - BCscreenshot1.jpg",
+      "frontmatter": "title: Bustle Clone\nlayout: project\nstartDate: 2016-03-30\nendDate: 2016-03-31\npermalink: BustleClone\nteaser: A mock version of the news site Bustle built in one day in Ember.\nrepo: https://github.com/joekarasek/Advanced-RPS\ndemo: http://joekarasek.github.io/epicodus-ember-bustle/\ntags:\n  - Javascript\n  - Ember.js\n  - Firebase DB\ncontributors:\n  -\n    name: Brooke Hurford\n    link: https://github.com/brookehurford\nimgs:\n  - BCscreenshot1.jpg",
       "html": "<p>This one-day project is designed to look like the news site bustle and was done to practice use of the Ember.js framework. Users can see a list of article preview titles, click on an article to be taken to its page, and use the navbar to navigate. An &#39;admin&#39; can create, update, and delete articles (no authentication in place at this time).</p>\n"
     },
     {
       "attributes": {
         "title": "Ember Q and A",
         "layout": "project",
+        "startDate": "2016-04-01T00:00:00.000Z",
         "teaser": "Ember.js based Question and Answer board.",
         "permalink": "EmberQandA",
         "repo": "https://github.com/joekarasek/epicodus-ember-QandA",
-        "demo": "http://joekarasek.github.io/epicodus-ember-QandA",
         "tags": [
           "Javascript",
           "Node.js",
           "Ember.js",
           "Firebase DB",
-          "Materialize"
+          "Materialize",
+          "SASS"
         ],
         "imgs": [
           "EQAscreenshot1.jpg"
-        ]
+        ],
+        "dates": "Mar 31st '16"
       },
       "body": "This app is designed to function as a question and answer board. Users can create questions, edit and update questions, and delete questions. Users can also create and view multiple answers for each question (a one to many database relationship).\n\nThis web-app was built using the [Ember](http://emberjs.com/) framework. This web-app uses [Firebase](https://www.firebase.com/) for its database.\n\nThis code was put together for the week 3 code review for the Level 2 Javascript Epicodus course.\n",
-      "frontmatter": "title: Ember Q and A\nlayout: project\nteaser: Ember.js based Question and Answer board.\npermalink: EmberQandA\nrepo: https://github.com/joekarasek/epicodus-ember-QandA\ndemo: http://joekarasek.github.io/epicodus-ember-QandA\ntags:\n  - Javascript\n  - Node.js\n  - Ember.js\n  - Firebase DB\n  - Materialize\nimgs:\n  - EQAscreenshot1.jpg",
+      "frontmatter": "title: Ember Q and A\nlayout: project\nstartDate: 2016-04-01\nteaser: Ember.js based Question and Answer board.\npermalink: EmberQandA\nrepo: https://github.com/joekarasek/epicodus-ember-QandA\ntags:\n  - Javascript\n  - Node.js\n  - Ember.js\n  - Firebase DB\n  - Materialize\n  - SASS\nimgs:\n  - EQAscreenshot1.jpg",
       "html": "<p>This app is designed to function as a question and answer board. Users can create questions, edit and update questions, and delete questions. Users can also create and view multiple answers for each question (a one to many database relationship).</p>\n<p>This web-app was built using the <a href=\"http://emberjs.com/\">Ember</a> framework. This web-app uses <a href=\"https://www.firebase.com/\">Firebase</a> for its database.</p>\n<p>This code was put together for the week 3 code review for the Level 2 Javascript Epicodus course.</p>\n"
     },
     {
       "attributes": {
-        "title": "H?ke",
+        "title": "Hike Guide",
         "layout": "project",
+        "startDate": "2016-04-11T00:00:00.000Z",
+        "endDate": "2016-04-15T00:00:00.000Z",
         "teaser": "Hiking guide with live weather information and google maps.",
         "permalink": "HikeGuide",
         "repo": "https://github.com/joekarasek/epicodus-hike-guide",
@@ -113,16 +123,19 @@
         "imgs": [
           "HGscreenshot1.jpg",
           "HGscreenshot2.jpg"
-        ]
+        ],
+        "dates": "Apr 10th '16 - Apr 14th '16"
       },
-      "body": "H?KE is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.\n\nThis project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.\n",
-      "frontmatter": "title: H?ke\nlayout: project\nteaser: Hiking guide with live weather information and google maps.\npermalink: HikeGuide\nrepo: https://github.com/joekarasek/epicodus-hike-guide\ndemo: http://hike-portland.herokuapp.com\ntags:\n  - Javascript\n  - Node.js\n  - Ember.js\n  - Firebase DB\n  - SASS\ncontributors:\n  -\n    name: Sara Wagner\n    link: https://github.com/swagner23q\n  -\n    name: Josh Overly\n    link: https://github.com/jos-h20/\nimgs:\n  - HGscreenshot1.jpg\n  - HGscreenshot2.jpg",
-      "html": "<p>H?KE is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.</p>\n<p>This project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.</p>\n"
+      "body": "_**H?KE**_ is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.\n\nThis project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.\n",
+      "frontmatter": "title: Hike Guide\nlayout: project\nstartDate: 2016-04-11\nendDate: 2016-04-15\nteaser: Hiking guide with live weather information and google maps.\npermalink: HikeGuide\nrepo: https://github.com/joekarasek/epicodus-hike-guide\ndemo: http://hike-portland.herokuapp.com\ntags:\n  - Javascript\n  - Node.js\n  - Ember.js\n  - Firebase DB\n  - SASS\ncontributors:\n  -\n    name: Sara Wagner\n    link: https://github.com/swagner23q\n  -\n    name: Josh Overly\n    link: https://github.com/jos-h20/\nimgs:\n  - HGscreenshot1.jpg\n  - HGscreenshot2.jpg",
+      "html": "<p><em><strong>H?KE</strong></em> is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.</p>\n<p>This project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.</p>\n"
     },
     {
       "attributes": {
         "title": "Mazes",
         "layout": "project",
+        "startDate": "2016-02-15T00:00:00.000Z",
+        "endDate": "2016-03-15T00:00:00.000Z",
         "teaser": "Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.",
         "permalink": "MazeGenerator",
         "repo": "https://github.com/joekarasek/mazes.git",
@@ -134,16 +147,19 @@
         ],
         "imgs": [
           "MGscreenshot1.jpg"
-        ]
+        ],
+        "dates": "Feb 14th '16 - Mar 14th '16"
       },
       "body": "_**Mazes**_ is a side project of mine. It is an exploration of the algorithms used to generate mazes and the biases these algorithms produce in the mazes. The current version of this app lets you choose from three algorithms (Binary Tree, Sidewinder, and Aldous-Broder), choose the size of your maze, and fills the maze with color to highlight the 'texture' of the maze (a visually easy way to reveal biases).\n",
-      "frontmatter": "title: Mazes\nlayout: project\nteaser: Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.\npermalink: MazeGenerator\nrepo: https://github.com/joekarasek/mazes.git\ndemo: http://joekarasek.github.io/mazes/\ntags:\n  - Javascript\n  - Node.js\n  - Gulp\nimgs:\n  - MGscreenshot1.jpg",
+      "frontmatter": "title: Mazes\nlayout: project\nstartDate: 2016-02-15\nendDate: 2016-03-15\nteaser: Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.\npermalink: MazeGenerator\nrepo: https://github.com/joekarasek/mazes.git\ndemo: http://joekarasek.github.io/mazes/\ntags:\n  - Javascript\n  - Node.js\n  - Gulp\nimgs:\n  - MGscreenshot1.jpg",
       "html": "<p><em><strong>Mazes</strong></em> is a side project of mine. It is an exploration of the algorithms used to generate mazes and the biases these algorithms produce in the mazes. The current version of this app lets you choose from three algorithms (Binary Tree, Sidewinder, and Aldous-Broder), choose the size of your maze, and fills the maze with color to highlight the &#39;texture&#39; of the maze (a visually easy way to reveal biases).</p>\n"
     },
     {
       "attributes": {
         "title": "pdxRoasted",
         "layout": "project",
+        "startDate": "2016-04-10T00:00:00.000Z",
+        "endDate": "2016-05-20T00:00:00.000Z",
         "teaser": "Search for coffees roasted in Portland by flavor profile.",
         "permalink": "pdxRoasted",
         "repo": "https://github.com/joekarasek/pdxRoasted.git",
@@ -151,7 +167,8 @@
         "tags": [
           "Javascript",
           "Angular 2",
-          "Firebase DB"
+          "Firebase DB",
+          "SASS"
         ],
         "contributors": [
           {
@@ -170,16 +187,19 @@
             "name": "Taylor Pokoj",
             "link": "https://github.com/pokojt"
           }
-        ]
+        ],
+        "dates": "Apr 9th '16 - May 19th '16"
       },
       "body": "_**pdxRoasted**_ lets users explore Portland's wonderful selection of roasted coffees. Users can create a flavor profile of one or more flavors, and are given a list of roasts based on their choices. Jason, Ryan, and built the backend of the Angular 2 app while Brooke and Taylor put together a wonderful front-end. This project was a great further exploration of Angular 2.\n",
-      "frontmatter": "title: pdxRoasted\nlayout: project\nteaser: Search for coffees roasted in Portland by flavor profile.\npermalink: pdxRoasted\nrepo: https://github.com/joekarasek/pdxRoasted.git\ndemo: null\ntags:\n  - Javascript\n  - Angular 2\n  - Firebase DB\ncontributors:\n  -\n    name: Jason Awbrey\n    link: https://github.com/jsonberry\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Brooke Hurford\n    link: https://github.com/brookehurford\n  -\n    name: Taylor Pokoj\n    link: https://github.com/pokojt",
+      "frontmatter": "title: pdxRoasted\nlayout: project\nstartDate: 2016-04-10\nendDate: 2016-05-20\nteaser: Search for coffees roasted in Portland by flavor profile.\npermalink: pdxRoasted\nrepo: https://github.com/joekarasek/pdxRoasted.git\ndemo: null\ntags:\n  - Javascript\n  - Angular 2\n  - Firebase DB\n  - SASS\ncontributors:\n  -\n    name: Jason Awbrey\n    link: https://github.com/jsonberry\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Brooke Hurford\n    link: https://github.com/brookehurford\n  -\n    name: Taylor Pokoj\n    link: https://github.com/pokojt",
       "html": "<p><em><strong>pdxRoasted</strong></em> lets users explore Portland&#39;s wonderful selection of roasted coffees. Users can create a flavor profile of one or more flavors, and are given a list of roasts based on their choices. Jason, Ryan, and built the backend of the Angular 2 app while Brooke and Taylor put together a wonderful front-end. This project was a great further exploration of Angular 2.</p>\n"
     },
     {
       "attributes": {
         "title": "Portfolio v2",
         "layout": "project",
+        "startDate": "2016-02-15T00:00:00.000Z",
+        "endDate": "2016-05-20T00:00:00.000Z",
         "teaser": "A professional portfolio built using Jekyll, a ruby based static website generator.",
         "permalink": "PortfolioV2",
         "live": "http://www.zeppidy.com/",
@@ -193,16 +213,18 @@
           "Node.js",
           "Gulp",
           "SASS"
-        ]
+        ],
+        "dates": "Feb 14th '16 - May 19th '16"
       },
       "body": "This version of my web development portfolio was completed as a personal side project during my time as a student at Epicodus. I wanted to explore a framework that we were not learning in school and was attracted to Jekyll's simplicity, as well as the fact that it was used and recommended by Github Pages.\n\nJekyll works by using content stored in markdown files with YAML front-matter to generate a static website through a series of nested templates. The templating engine is Liquid, which is very similar to other templating engines likes Twig and Handlebars.\n\nOriginally, I used Jekyll to handle all the build processes. However, as I customized the project (for example, by adding SASS), I replaced many of these processes with custom built Gulp tasks, including scripts to build and deploy updates to the site and its content. I also decided to host the site through Digital Ocean so I could use a custom domain name.\n",
-      "frontmatter": "title: Portfolio v2\nlayout: project\nteaser: A professional portfolio built using Jekyll, a ruby based static website generator.\npermalink: PortfolioV2\nlive: http://www.zeppidy.com/\nrepo:\ntags:\n  - Javascript\n  - Jekyll\n  - Markdown\n  - YAML\n  - Liquid\n  - Node.js\n  - Gulp\n  - SASS",
+      "frontmatter": "title: Portfolio v2\nlayout: project\nstartDate: 2016-02-15\nendDate: 2016-05-20\nteaser: A professional portfolio built using Jekyll, a ruby based static website generator.\npermalink: PortfolioV2\nlive: http://www.zeppidy.com/\nrepo:\ntags:\n  - Javascript\n  - Jekyll\n  - Markdown\n  - YAML\n  - Liquid\n  - Node.js\n  - Gulp\n  - SASS",
       "html": "<p>This version of my web development portfolio was completed as a personal side project during my time as a student at Epicodus. I wanted to explore a framework that we were not learning in school and was attracted to Jekyll&#39;s simplicity, as well as the fact that it was used and recommended by Github Pages.</p>\n<p>Jekyll works by using content stored in markdown files with YAML front-matter to generate a static website through a series of nested templates. The templating engine is Liquid, which is very similar to other templating engines likes Twig and Handlebars.</p>\n<p>Originally, I used Jekyll to handle all the build processes. However, as I customized the project (for example, by adding SASS), I replaced many of these processes with custom built Gulp tasks, including scripts to build and deploy updates to the site and its content. I also decided to host the site through Digital Ocean so I could use a custom domain name.</p>\n"
     },
     {
       "attributes": {
         "title": "Portfolio v3",
         "layout": "project",
+        "startDate": "2016-07-11T00:00:00.000Z",
         "teaser": "This site! A professional portfolio built using Polymer.",
         "permalink": "PortfolioV3",
         "repo": null,
@@ -212,16 +234,19 @@
           "Markdown",
           "YAML",
           "Node.js"
-        ]
+        ],
+        "dates": "Jul 10th '16"
       },
       "body": "You are currently viewing the latest version (v3) of my professional web development portfolio. This site was built using Polymer, the .... and is hosted on Digital Ocean.\n\nI chose Polymer to build this site because I enjoyed the ease with which I can create interactive components without writing tons of boiler plate javascript, and I like the fast, sleek, progressive web app UI experience that Polymer creates.\n\nMy previous portfolio was built with Jekyll, a static website generator, which uses content stored in markdown file with YAML front-matter. I really like this clean and simple way of storing a record of my projects, and I wanted to keep it for this version of my portfolio, so I wrote a custom Node.js script that converts all my markdown files into a single json file that is easily consumed by Polymer.\n",
-      "frontmatter": "title: Portfolio v3\nlayout: project\nteaser: This site! A professional portfolio built using Polymer.\npermalink: PortfolioV3\nrepo:\ntags:\n  - Javascript\n  - Polymer\n  - Markdown\n  - YAML\n  - Node.js",
+      "frontmatter": "title: Portfolio v3\nlayout: project\nstartDate: 2016-07-11\nteaser: This site! A professional portfolio built using Polymer.\npermalink: PortfolioV3\nrepo:\ntags:\n  - Javascript\n  - Polymer\n  - Markdown\n  - YAML\n  - Node.js",
       "html": "<p>You are currently viewing the latest version (v3) of my professional web development portfolio. This site was built using Polymer, the .... and is hosted on Digital Ocean.</p>\n<p>I chose Polymer to build this site because I enjoyed the ease with which I can create interactive components without writing tons of boiler plate javascript, and I like the fast, sleek, progressive web app UI experience that Polymer creates.</p>\n<p>My previous portfolio was built with Jekyll, a static website generator, which uses content stored in markdown file with YAML front-matter. I really like this clean and simple way of storing a record of my projects, and I wanted to keep it for this version of my portfolio, so I wrote a custom Node.js script that converts all my markdown files into a single json file that is easily consumed by Polymer.</p>\n"
     },
     {
       "attributes": {
         "title": "Sportal",
         "layout": "project",
+        "startDate": "2016-05-09T00:00:00.000Z",
+        "endDate": "2016-05-20T00:00:00.000Z",
         "teaser": "This is a site that connects users with places to play recreational sports!",
         "permalink": "Sportal",
         "repo": "https://github.com/joekarasek/Sportal-Drupal",
@@ -257,16 +282,19 @@
           "SPscreenshot2.jpg",
           "SPscreenshot3.jpg",
           "SPscreenshot4.jpg"
-        ]
+        ],
+        "dates": "May 8th '16 - May 19th '16"
       },
       "body": "_**Sportal**_ is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.\n",
-      "frontmatter": "title: Sportal\nlayout: project\nteaser: This is a site that connects users with places to play recreational sports!\npermalink: Sportal\nrepo: https://github.com/joekarasek/Sportal-Drupal\ndemo: http://www.sportalusa.us/\ntags:\n  - PHP\n  - Drupal 7\ncontributors:\n  -\n    name: Alex Fallenstedt\n    link: https://github.com/Fallenstedt\n  -\n    name: Adam Ross Russell\n    link: https://github.com/adamrr724\n  -\n    name: Aundra Miller\n    link: https://github.com/milleraundra\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Blake Scott\n    link: https://github.com/blakerscott\nimgs:\n  - SPscreenshot1.jpg\n  - SPscreenshot2.jpg\n  - SPscreenshot3.jpg\n  - SPscreenshot4.jpg",
+      "frontmatter": "title: Sportal\nlayout: project\nstartDate: 2016-05-09\nendDate: 2016-05-20\nteaser: This is a site that connects users with places to play recreational sports!\npermalink: Sportal\nrepo: https://github.com/joekarasek/Sportal-Drupal\ndemo: http://www.sportalusa.us/\ntags:\n  - PHP\n  - Drupal 7\ncontributors:\n  -\n    name: Alex Fallenstedt\n    link: https://github.com/Fallenstedt\n  -\n    name: Adam Ross Russell\n    link: https://github.com/adamrr724\n  -\n    name: Aundra Miller\n    link: https://github.com/milleraundra\n  -\n    name: Ryan Brown\n    link: https://github.com/browneryan\n  -\n    name: Blake Scott\n    link: https://github.com/blakerscott\nimgs:\n  - SPscreenshot1.jpg\n  - SPscreenshot2.jpg\n  - SPscreenshot3.jpg\n  - SPscreenshot4.jpg",
       "html": "<p><em><strong>Sportal</strong></em> is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.</p>\n"
     },
     {
       "attributes": {
         "title": "Zeppidy",
         "layout": "project",
+        "startDate": "2016-06-06T00:00:00.000Z",
+        "endDate": "2016-07--08",
         "teaser": "Explore real estate market trends through charts, graphics, and maps.",
         "permalink": "Zeppidy",
         "live": "http://www.zeppidy.com/",
@@ -292,10 +320,11 @@
           "ZMTscreenshot2.jpg",
           "ZMTscreenshot3.jpg",
           "ZMTscreenshot4.jpg"
-        ]
+        ],
+        "dates": "Jun 5th '16 - Jul 1st '16"
       },
       "body": "[_**Zeppidy, Inc.**_](http://www.zeppidy.com) - The Home Buying & Selling Platform™ is a Portland, Oregon tech startup streamlining the real estate process for buyers, sellers, and agents.\n  -how is it different from competitors\n  -launched during the internship, fundraising\n\n-built microservices to replace functionality from the drupal 7 build,\n  -faster, better experience, scalable\n  -better interface with complex db\n  -foundation for bridge to completely drupal free architecture\n\n-created MT analysis\n  -unique among competitors, not offered on Zillow or RedFin\n  -full stack, including a modern UI experience with Polymer\n  -backend API call to get market analysis data, An API for asynchronous programming\nwith observable streams\n  -got to include it in the launch of the site! including deploying patches to production\n  -users view a number of data rich charts, graphics, and maps, dynamically filter views based on both area and time\n\n-assisted other interns in the development of\n  -typeahead, predictive search result\n  -photo masonry and lightbox\n  -property page in polymer\n\n-other experience\n  -demoing to clients\n  -deployment practice by managing the dev server\n  -solving problems with deployment\n  -working with a diverse team on a large project\n",
-      "frontmatter": "title: Zeppidy\nlayout: project\nteaser: Explore real estate market trends through charts, graphics, and maps.\npermalink: Zeppidy\nlive: http://www.zeppidy.com/\ntags:\n  - Javascript\n  - Node.js\n  - Rxjs\n  - Loopback\n  - StrongLoop\n  - Underscore.js\n  - Polymer\n  - Numeral.js\n  - Moment.js\n  - Google Maps API\n  - Google Charts API\n  - Gulp\n  - PHP\n  - Drupal 7\n  - CSS\nimgs:\n  - ZMTscreenshot1.jpg\n  - ZMTscreenshot2.jpg\n  - ZMTscreenshot3.jpg\n  - ZMTscreenshot4.jpg",
+      "frontmatter": "title: Zeppidy\nlayout: project\nstartDate: 2016-06-06\nendDate: 2016-07--08\nteaser: Explore real estate market trends through charts, graphics, and maps.\npermalink: Zeppidy\nlive: http://www.zeppidy.com/\ntags:\n  - Javascript\n  - Node.js\n  - Rxjs\n  - Loopback\n  - StrongLoop\n  - Underscore.js\n  - Polymer\n  - Numeral.js\n  - Moment.js\n  - Google Maps API\n  - Google Charts API\n  - Gulp\n  - PHP\n  - Drupal 7\n  - CSS\nimgs:\n  - ZMTscreenshot1.jpg\n  - ZMTscreenshot2.jpg\n  - ZMTscreenshot3.jpg\n  - ZMTscreenshot4.jpg",
       "html": "<p><a href=\"http://www.zeppidy.com\"><em><strong>Zeppidy, Inc.</strong></em></a> - The Home Buying &amp; Selling Platform™ is a Portland, Oregon tech startup streamlining the real estate process for buyers, sellers, and agents.\n  -how is it different from competitors\n  -launched during the internship, fundraising</p>\n<p>-built microservices to replace functionality from the drupal 7 build,\n  -faster, better experience, scalable\n  -better interface with complex db\n  -foundation for bridge to completely drupal free architecture</p>\n<p>-created MT analysis\n  -unique among competitors, not offered on Zillow or RedFin\n  -full stack, including a modern UI experience with Polymer\n  -backend API call to get market analysis data, An API for asynchronous programming\nwith observable streams\n  -got to include it in the launch of the site! including deploying patches to production\n  -users view a number of data rich charts, graphics, and maps, dynamically filter views based on both area and time</p>\n<p>-assisted other interns in the development of\n  -typeahead, predictive search result\n  -photo masonry and lightbox\n  -property page in polymer</p>\n<p>-other experience\n  -demoing to clients\n  -deployment practice by managing the dev server\n  -solving problems with deployment\n  -working with a diverse team on a large project</p>\n"
     }
   ]
