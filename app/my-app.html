@@ -50,7 +50,7 @@
       }
       #about-me--paper-item {
         padding-left: 0px;
-        margin-top: 30px;
+        margin-top: 85px;
         font-weight: 900;
       }
       app-drawer {
@@ -97,7 +97,7 @@
         text-align: center;
       }
       #drawer__projects-section-header {
-        margin-top: 90px;
+        margin-top: 20px;
         margin-left: 30px;
         margin-bottom: 5px;
       }
@@ -150,9 +150,9 @@
         padding-left: 30px;
         font-family: 'Ubuntu', 'Noto', sans-serif;
       }
-      paper-item:not(.social-media-links) {
+      paper-item#about-me--paper-item {
         --paper-item-selected: {
-          background-color: rgba(0,0,0,0.2);
+          background-color: rgba(0,0,0,0);
         }
       }
       paper-item:hover {
@@ -223,8 +223,16 @@
             <h3>Web Developer</h3>
           </div>
 
-          <h1 id="drawer__projects-section-header">Projects</h1>
+          <!--About Me Button-->
+          <paper-listbox attr-for-selected="name"
+                         class="drawer-list"
+                         selected="{{routeData.view}}"
+                         role="navigation">
+            <paper-item name="" id="about-me--paper-item"><h1>About Me</h1></paper-item>
+          </paper-listbox>
 
+          <!--Projects-->
+          <h1 id="drawer__projects-section-header">Projects</h1>
           <paper-listbox
                   attr-for-selected="name"
                   class="drawer-list"
@@ -235,14 +243,6 @@
                     items="[[content.projects]]">
               <paper-item name="[[ item.attributes.permalink ]]">[[ item.attributes.title ]]</paper-item>
             </template>
-          </paper-listbox>
-
-          <!--About Me Button-->
-          <paper-listbox attr-for-selected="name"
-                         class="drawer-list"
-                         selected="{{routeData.view}}"
-                         role="navigation">
-            <paper-item name="" id="about-me--paper-item"><h1>About Me</h1></paper-item>
           </paper-listbox>
 
           <!--Social Media Links-->
