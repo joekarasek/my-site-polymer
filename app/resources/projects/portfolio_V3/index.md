@@ -1,7 +1,7 @@
 ---
 title: Portfolio v3
 layout: project
-startDate: 1467806400
+startDate: 2016-07-11
 teaser: This site! A professional portfolio built using Polymer.
 permalink: PortfolioV3
 repo:

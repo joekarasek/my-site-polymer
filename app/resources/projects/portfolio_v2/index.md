@@ -1,8 +1,8 @@
 ---
 title: Portfolio v2
 layout: project
-startDate: 1456833600
-endDate: 1465214400
+startDate: 2016-02-15
+endDate: 2016-05-20
 teaser: A professional portfolio built using Jekyll, a ruby based static website generator.
 permalink: PortfolioV2
 live: http://www.zeppidy.com/

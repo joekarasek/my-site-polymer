@@ -1,8 +1,8 @@
 ---
 title: Hike Guide
 layout: project
-startDate: 1460376000
-endDate: 1460721600
+startDate: 2016-04-11
+endDate: 2016-04-15
 teaser: Hiking guide with live weather information and google maps.
 permalink: HikeGuide
 repo: https://github.com/joekarasek/epicodus-hike-guide

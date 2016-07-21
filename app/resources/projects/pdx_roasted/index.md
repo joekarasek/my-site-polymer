@@ -1,8 +1,8 @@
 ---
 title: pdxRoasted
 layout: project
-startDate: 1459512000
-endDate: 1462881600
+startDate: 2016-04-10
+endDate: 2016-05-20
 teaser: Search for coffees roasted in Portland by flavor profile.
 permalink: pdxRoasted
 repo: https://github.com/joekarasek/pdxRoasted.git
@@ -11,6 +11,7 @@ tags:
   - Javascript
   - Angular 2
   - Firebase DB
+  - SASS
 contributors:
   -
     name: Jason Awbrey

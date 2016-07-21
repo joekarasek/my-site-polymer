@@ -1,8 +1,8 @@
 ---
 title: Sportal
 layout: project
-startDate: 1462795200
-endDate: 1463745600
+startDate: 2016-05-09
+endDate: 2016-05-20
 teaser: This is a site that connects users with places to play recreational sports!
 permalink: Sportal
 repo: https://github.com/joekarasek/Sportal-Drupal

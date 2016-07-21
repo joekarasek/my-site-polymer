@@ -1,8 +1,8 @@
 ---
 title: Rock Paper Scissors 7
 layout: project
-startDate: 1457352000
-endDate: 1457697600
+startDate: 2016-03-07
+endDate: 2016-03-11
 teaser: PHP/Silex based Rock, Paper, Scissors with 7-choices, player sign-in, statistics and leaderboard.
 permalink: RockPaperScissors7
 repo: https://github.com/joekarasek/Advanced-RPS

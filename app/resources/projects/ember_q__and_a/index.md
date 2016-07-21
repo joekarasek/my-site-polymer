@@ -1,8 +1,7 @@
 ---
 title: Ember Q and A
 layout: project
-startDate: 1459497600
-endDate: 1459519200
+startDate: 2016-04-01
 teaser: Ember.js based Question and Answer board.
 permalink: EmberQandA
 repo: https://github.com/joekarasek/epicodus-ember-QandA
