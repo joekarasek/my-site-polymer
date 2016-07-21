@@ -1,16 +1,18 @@
 ---
+hidden: true
 title: Ember Q and A
 layout: project
+startDate: 2016-04-01
 teaser: Ember.js based Question and Answer board.
 permalink: EmberQandA
 repo: https://github.com/joekarasek/epicodus-ember-QandA
-demo: http://joekarasek.github.io/epicodus-ember-QandA
 tags:
   - Javascript
   - Node.js
   - Ember.js
   - Firebase DB
   - Materialize
+  - SASS
 imgs:
   - EQAscreenshot1.jpg
 ---
