@@ -1,6 +1,8 @@
 ---
 title: Bustle Clone
 layout: project
+startDate: 1459339200
+endDate: 1459425600
 permalink: BustleClone
 teaser: A mock version of the news site Bustle built in one day in Ember.
 repo: https://github.com/joekarasek/Advanced-RPS

@@ -1,6 +1,8 @@
 ---
-title: H?ke
+title: Hike Guide
 layout: project
+startDate: 1460376000
+endDate: 1460721600
 teaser: Hiking guide with live weather information and google maps.
 permalink: HikeGuide
 repo: https://github.com/joekarasek/epicodus-hike-guide
@@ -22,6 +24,6 @@ imgs:
   - HGscreenshot1.jpg
   - HGscreenshot2.jpg
 ---
-H?KE is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.
+_**H?KE**_ is a web application that provides basic information and weather on hiking trails around the Portland area. The site pulls in information on hiking trails, and uses that information to find the weather for each location.
 
 This project was put together as a three day capstone project to the Level 2 Javascript class at Epicodus, a vocational school for aspiring programmers. This app is built on the Ember.js framework and utilizes three APIs (trailsApi,Open Weather Maps API, and Google Maps API) to generate information for user.

@@ -178,6 +178,48 @@
     },
     {
       "attributes": {
+        "title": "Portfolio v2",
+        "layout": "project",
+        "teaser": "A professional portfolio built using Jekyll, a ruby based static website generator.",
+        "permalink": "PortfolioV2",
+        "live": "http://www.zeppidy.com/",
+        "repo": null,
+        "tags": [
+          "Javascript",
+          "Jekyll",
+          "Markdown",
+          "YAML",
+          "Liquid",
+          "Node.js",
+          "Gulp",
+          "SASS"
+        ]
+      },
+      "body": "This version of my web development portfolio was completed as a personal side project during my time as a student at Epicodus. I wanted to explore a framework that we were not learning in school and was attracted to Jekyll's simplicity, as well as the fact that it was used and recommended by Github Pages.\n\nJekyll works by using content stored in markdown files with YAML front-matter to generate a static website through a series of nested templates. The templating engine is Liquid, which is very similar to other templating engines likes Twig and Handlebars.\n\nOriginally, I used Jekyll to handle all the build processes. However, as I customized the project (for example, by adding SASS), I replaced many of these processes with custom built Gulp tasks, including scripts to build and deploy updates to the site and its content. I also decided to host the site through Digital Ocean so I could use a custom domain name.\n",
+      "frontmatter": "title: Portfolio v2\nlayout: project\nteaser: A professional portfolio built using Jekyll, a ruby based static website generator.\npermalink: PortfolioV2\nlive: http://www.zeppidy.com/\nrepo:\ntags:\n  - Javascript\n  - Jekyll\n  - Markdown\n  - YAML\n  - Liquid\n  - Node.js\n  - Gulp\n  - SASS",
+      "html": "<p>This version of my web development portfolio was completed as a personal side project during my time as a student at Epicodus. I wanted to explore a framework that we were not learning in school and was attracted to Jekyll&#39;s simplicity, as well as the fact that it was used and recommended by Github Pages.</p>\n<p>Jekyll works by using content stored in markdown files with YAML front-matter to generate a static website through a series of nested templates. The templating engine is Liquid, which is very similar to other templating engines likes Twig and Handlebars.</p>\n<p>Originally, I used Jekyll to handle all the build processes. However, as I customized the project (for example, by adding SASS), I replaced many of these processes with custom built Gulp tasks, including scripts to build and deploy updates to the site and its content. I also decided to host the site through Digital Ocean so I could use a custom domain name.</p>\n"
+    },
+    {
+      "attributes": {
+        "title": "Portfolio v3",
+        "layout": "project",
+        "teaser": "This site! A professional portfolio built using Polymer.",
+        "permalink": "PortfolioV3",
+        "repo": null,
+        "tags": [
+          "Javascript",
+          "Polymer",
+          "Markdown",
+          "YAML",
+          "Node.js"
+        ]
+      },
+      "body": "You are currently viewing the latest version (v3) of my professional web development portfolio. This site was built using Polymer, the .... and is hosted on Digital Ocean.\n\nI chose Polymer to build this site because I enjoyed the ease with which I can create interactive components without writing tons of boiler plate javascript, and I like the fast, sleek, progressive web app UI experience that Polymer creates.\n\nMy previous portfolio was built with Jekyll, a static website generator, which uses content stored in markdown file with YAML front-matter. I really like this clean and simple way of storing a record of my projects, and I wanted to keep it for this version of my portfolio, so I wrote a custom Node.js script that converts all my markdown files into a single json file that is easily consumed by Polymer.\n",
+      "frontmatter": "title: Portfolio v3\nlayout: project\nteaser: This site! A professional portfolio built using Polymer.\npermalink: PortfolioV3\nrepo:\ntags:\n  - Javascript\n  - Polymer\n  - Markdown\n  - YAML\n  - Node.js",
+      "html": "<p>You are currently viewing the latest version (v3) of my professional web development portfolio. This site was built using Polymer, the .... and is hosted on Digital Ocean.</p>\n<p>I chose Polymer to build this site because I enjoyed the ease with which I can create interactive components without writing tons of boiler plate javascript, and I like the fast, sleek, progressive web app UI experience that Polymer creates.</p>\n<p>My previous portfolio was built with Jekyll, a static website generator, which uses content stored in markdown file with YAML front-matter. I really like this clean and simple way of storing a record of my projects, and I wanted to keep it for this version of my portfolio, so I wrote a custom Node.js script that converts all my markdown files into a single json file that is easily consumed by Polymer.</p>\n"
+    },
+    {
+      "attributes": {
         "title": "Sportal",
         "layout": "project",
         "teaser": "This is a site that connects users with places to play recreational sports!",
@@ -223,14 +265,27 @@
     },
     {
       "attributes": {
-        "title": "Zeppidy - Market Trends",
+        "title": "Zeppidy",
         "layout": "project",
         "teaser": "Explore real estate market trends through charts, graphics, and maps.",
         "permalink": "Zeppidy",
         "live": "http://www.zeppidy.com/",
         "tags": [
+          "Javascript",
+          "Node.js",
+          "Rxjs",
+          "Loopback",
+          "StrongLoop",
+          "Underscore.js",
+          "Polymer",
+          "Numeral.js",
+          "Moment.js",
+          "Google Maps API",
+          "Google Charts API",
+          "Gulp",
           "PHP",
-          "Drupal 7"
+          "Drupal 7",
+          "CSS"
         ],
         "imgs": [
           "ZMTscreenshot1.jpg",
@@ -239,9 +294,9 @@
           "ZMTscreenshot4.jpg"
         ]
       },
-      "body": "_**Sportal**_ is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.\n",
-      "frontmatter": "title: Zeppidy - Market Trends\nlayout: project\nteaser: Explore real estate market trends through charts, graphics, and maps.\npermalink: Zeppidy\nlive: http://www.zeppidy.com/\ntags:\n  - PHP\n  - Drupal 7\nimgs:\n  - ZMTscreenshot1.jpg\n  - ZMTscreenshot2.jpg\n  - ZMTscreenshot3.jpg\n  - ZMTscreenshot4.jpg",
-      "html": "<p><em><strong>Sportal</strong></em> is brings people together for recreational sports. Users can search for pick-up games, leagues, races, and places to play by location and category. Users can also create two level of accounts; a user that can post pick-up games and places to play, and a user that can post leagues and races. Several custom modules and a custom theme were built for this project.</p>\n"
+      "body": "[_**Zeppidy, Inc.**_](http://www.zeppidy.com) - The Home Buying & Selling Platform™ is a Portland, Oregon tech startup streamlining the real estate process for buyers, sellers, and agents.\n  -how is it different from competitors\n  -launched during the internship, fundraising\n\n-built microservices to replace functionality from the drupal 7 build,\n  -faster, better experience, scalable\n  -better interface with complex db\n  -foundation for bridge to completely drupal free architecture\n\n-created MT analysis\n  -unique among competitors, not offered on Zillow or RedFin\n  -full stack, including a modern UI experience with Polymer\n  -backend API call to get market analysis data, An API for asynchronous programming\nwith observable streams\n  -got to include it in the launch of the site! including deploying patches to production\n  -users view a number of data rich charts, graphics, and maps, dynamically filter views based on both area and time\n\n-assisted other interns in the development of\n  -typeahead, predictive search result\n  -photo masonry and lightbox\n  -property page in polymer\n\n-other experience\n  -demoing to clients\n  -deployment practice by managing the dev server\n  -solving problems with deployment\n  -working with a diverse team on a large project\n",
+      "frontmatter": "title: Zeppidy\nlayout: project\nteaser: Explore real estate market trends through charts, graphics, and maps.\npermalink: Zeppidy\nlive: http://www.zeppidy.com/\ntags:\n  - Javascript\n  - Node.js\n  - Rxjs\n  - Loopback\n  - StrongLoop\n  - Underscore.js\n  - Polymer\n  - Numeral.js\n  - Moment.js\n  - Google Maps API\n  - Google Charts API\n  - Gulp\n  - PHP\n  - Drupal 7\n  - CSS\nimgs:\n  - ZMTscreenshot1.jpg\n  - ZMTscreenshot2.jpg\n  - ZMTscreenshot3.jpg\n  - ZMTscreenshot4.jpg",
+      "html": "<p><a href=\"http://www.zeppidy.com\"><em><strong>Zeppidy, Inc.</strong></em></a> - The Home Buying &amp; Selling Platform™ is a Portland, Oregon tech startup streamlining the real estate process for buyers, sellers, and agents.\n  -how is it different from competitors\n  -launched during the internship, fundraising</p>\n<p>-built microservices to replace functionality from the drupal 7 build,\n  -faster, better experience, scalable\n  -better interface with complex db\n  -foundation for bridge to completely drupal free architecture</p>\n<p>-created MT analysis\n  -unique among competitors, not offered on Zillow or RedFin\n  -full stack, including a modern UI experience with Polymer\n  -backend API call to get market analysis data, An API for asynchronous programming\nwith observable streams\n  -got to include it in the launch of the site! including deploying patches to production\n  -users view a number of data rich charts, graphics, and maps, dynamically filter views based on both area and time</p>\n<p>-assisted other interns in the development of\n  -typeahead, predictive search result\n  -photo masonry and lightbox\n  -property page in polymer</p>\n<p>-other experience\n  -demoing to clients\n  -deployment practice by managing the dev server\n  -solving problems with deployment\n  -working with a diverse team on a large project</p>\n"
     }
   ]
 }

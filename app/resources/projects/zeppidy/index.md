@@ -1,6 +1,8 @@
 ---
 title: Zeppidy
 layout: project
+startDate: 1465214400
+endDate: 1467979200
 teaser: Explore real estate market trends through charts, graphics, and maps.
 permalink: Zeppidy
 live: http://www.zeppidy.com/

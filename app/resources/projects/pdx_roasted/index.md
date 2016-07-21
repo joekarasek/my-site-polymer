@@ -1,6 +1,8 @@
 ---
 title: pdxRoasted
 layout: project
+startDate: 1459512000
+endDate: 1462881600
 teaser: Search for coffees roasted in Portland by flavor profile.
 permalink: pdxRoasted
 repo: https://github.com/joekarasek/pdxRoasted.git
