@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Ember Q and A
 layout: project
 startDate: 2016-04-01

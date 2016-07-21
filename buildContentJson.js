@@ -29,7 +29,8 @@ glob('/Users/karasek/Dev/projects/polymer/app/resources/projects/**/*.md', funct
         fileData.html = marked(fileData.body);
         // convert timestamps to standard english
         fileData.attributes.dates = dateHelper(fileData.attributes.startDate, fileData.attributes.endDate);
-        data.projects.push(fileData);
+        // pushes fileData to data object if hidden is not set to true
+        if (!fileData.attributes.hidden) data.projects.push(fileData);
     });
 
     // Sort projects in json by start date
