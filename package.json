@@ -1,14 +1,24 @@
 {
   "name": "my-site",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Web development portfolio for Joe Karasek",
   "main": "service-worker.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "serve": "polymer serve",
+    "buildJson": "node buildContentJson.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joe Karasek",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "front-matter": "^2.1.0",
+    "glob": "^7.0.5",
+    "marked": "^0.3.5"
+  },
+  "devDependencies": {
+    "moment": "^2.14.1"
+  }
 }
