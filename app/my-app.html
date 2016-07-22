@@ -17,14 +17,17 @@
 
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 
-<link rel="import" href="my-icons.html">
+<link rel="import" href="my-icons/my-icons.html">
 
-<link rel="import" href="./my-project.html">
-<link rel="import" href="./my-about.html">
-<link rel="import" href="../styles/my-theme.html">
+<link rel="import" href="my-project/my-project.html">
+<link rel="import" href="my-about/my-about.html">
+<link rel="import" href="styles/my-theme.html">
 
-<dom-module id="my-portfolio">
+<dom-module id="my-app">
 
   <template>
 
@@ -45,23 +48,32 @@
         color: var(--dark-primary-color);
         text-decoration: underline;
       }
+      #about-me--paper-item {
+        padding-left: 0px;
+        margin-top: 85px;
+        font-weight: 900;
+      }
       app-drawer {
+        --app-drawer-width: 315px;
         --app-drawer-content-container: {
-          background-color: var(--primary-background-color);
-        }
+          background-color: var(--secondary-background-color);
+        };
       }
       app-drawer h1,h3 {
-        margin-left: 15px;
       }
       app-header {
-        background-color: var(--dark-primary-color);
-        color: #fff;
+        background-color: var(--primary-background-color);
+        height: 150px;
+        --app-header-background-rear-layer: {
+          /* The header is blue when condensed */
+          background-color: var(--secondary-background-color);
+        };
       }
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
       }
       .drawer-list {
-        margin: 0 20px;
+        margin: 0 30px;
       }
       .drawer-list a {
         display: block;
@@ -70,99 +82,233 @@
         text-decoration: none;
         color: var(--app-secondary-color);
       }
-      .drawer-list a.iron-selected {
-        color: black;
-        font-weight: bold;
-      }
       .drawer-list a.subroute {
         padding-left: 32px;
+      }
+      .drawer-list:last-child {
+        margin-bottom: 150px;
       }
       .drawer__social-media-icon {
         max-width: 18px;
         max-height: 18px;
         margin-right: 10px;
       }
+      .drawer--collapsed {
+        margin-top: -35px !important;
+      }
+      .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      #drawer__projects-section-header {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+      }
+      #drawer__contact-section-header {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+      }
+      my-about {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      my-project {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .name-logo {
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
+      }
+      .name-logo h1, h3 {
+        color: var(--secondary-text-color);
+        margin: 0px 0px;
+      }
+      .name-logo h1 {
+        font-size: 50px;
+      }
+      .name-logo h3 {
+        color: var(--secondary-text-color);
+        margin-top: -15px;
+      }
+      .name-logo--drawer {
+        margin-top: 15px;
+        display: inline-table;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
+      }
+      .name-logo--drawer h1, h3 {
+        color: var(--primary-text-color);
+        margin: 0px 0px;
+      }
+      .name-logo--drawer h1 {
+        font-size: 50px;
+      }
+      .name-logo--drawer h3 {
+        margin-top: -15px;
+      }
       paper-listbox {
         padding-top: 0px;
         padding-bottom: 0px;
+        background-color: var(--secondary-background-color);
+      }
+      paper-item {
+        cursor: pointer;
+        padding-left: 30px;
+        font-family: 'Ubuntu', 'Noto', sans-serif;
+      }
+      paper-item#about-me--paper-item {
+        --paper-item-selected: {
+          background-color: rgba(0,0,0,0);
+        }
+      }
+      paper-item:hover {
+        background-color: rgba(0,0,0,0.1);
+      }
+      paper-icon-button {
+        float: right;
+        margin-left: auto;
+        margin-top: 10px;
+        color: white;
+        width: 50px;
+        height: 50px;
       }
       .social-media-links {
         padding-left: 0px !important;
       }
-
       @media screen and (max-width: 640px) {
         .drawer--revealed {
           display: none;
         }
       }
-
       /* break point for drawer auto-hide */
       @media screen and (min-width: 640px) {
         .drawer--collapsed {
           display: none;
         }
+        paper-icon-button {
+          display: none;
+        }
       }
-
 
     </style>
 
-    <app-drawer-layout fullbleed>
+    <!--Routing-->
+    <app-location route="{{route}}"></app-location>
 
-      <!-- Drawer content -->
-      <app-drawer>
-        <h1>Joe Karasek</h1>
-        <paper-listbox attr-for-selected="name"
-                       class="drawer-list"
-                       selected="{{currentProject}}"
-                       role="navigation">
-          <paper-item name="About">About Me</paper-item>
-        </paper-listbox>
+    <app-route
+            route="{{route}}"
+            pattern="/:view"
+            data="{{routeData}}"
+            tail="{{subroute}}"></app-route>
 
-        <paper-listbox class="drawer-list">
-          <paper-item>
-            <a href="https://github.com/joekarasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/images/GitHub-Mark-32px.png" alt="">GitHub</a>
-          </paper-item>
-          <paper-item>
-            <a href="http://www.linkedin.com/in/joe-karasek" target="_blank" class="social-media-links"><img class="drawer__social-media-icon" src="/images/LinkedIn-Mark-32px.svg" alt="">LinkedIn</a>
-          </paper-item>
-        </paper-listbox>
+    <!--Ajax for content.json, which contains all the information for projects generated from markdown-->
+    <iron-ajax
+            auto
+            url="/app/resources/content.json"
+            handle-as="json"
+            last-response="{{content}}"></iron-ajax>
 
-        <h3>Projects</h3>
-        <paper-listbox attr-for-selected="name"
-                       class="drawer-list"
-                       selected="{{currentProject}}"
-                       role="navigation">
-          <template is="dom-repeat"
-                    items="[[projects]]">
-            <paper-item name="[[ item.title ]]">[[ item.title ]]</paper-item>
-          </template>
-        </paper-listbox>
-      </app-drawer>
 
-      <!-- Main content -->
-      <app-header-layout has-scrolling-region>
+    <app-header-layout fullbleed>
 
-        <app-header condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div class="drawer--collapsed" title>Joe Karasek - Portfolio</div>
-            <div class="drawer--revealed" title>[[currentProject]]</div>
-          </app-toolbar>
-        </app-header>
+      <app-header condenses
+                  effects="waterfall resize-title blend-background parallax-background"
+                  height="300px">
+        <div class="header-wrapper">
+          <paper-icon-button icon="menu" on-tap="toggleDrawer"></paper-icon-button>
+          <div class="drawer--collapsed name-logo" title>
+            <h1>Joe Karasek</h1>
+            <h3>Web Developer</h3>
+          </div>
+          <div class="drawer--revealed name-logo" title>
+            <h1>Joe Karasek</h1>
+            <h3>Web Developer</h3>
+          </div>
+        </div>
+      </app-header>
+
+      <!-- Drawer + Main content -->
+      <app-drawer-layout has-scrolling-region>
+
+        <!-- Drawer content -->
+        <app-drawer id="mainDrawer">
+          <div class="name-logo--drawer" title>
+            <h1>Joe Karasek</h1>
+            <h3>Web Developer</h3>
+          </div>
+
+          <div style="height: 100%; overflow: auto;">
+            <!--About Me Button-->
+            <paper-listbox attr-for-selected="name"
+                           class="drawer-list"
+                           selected="{{routeData.view}}"
+                           role="navigation">
+              <paper-item name="" id="about-me--paper-item"><h1>About Me</h1></paper-item>
+            </paper-listbox>
+
+            <!--Projects-->
+            <h1 id="drawer__projects-section-header">Projects</h1>
+            <paper-listbox
+                    attr-for-selected="name"
+                    class="drawer-list"
+                    selected="{{routeData.view}}"
+                    role="navigation">
+              <template
+                      is="dom-repeat"
+                      items="[[content.projects]]">
+                <paper-item name="[[ item.attributes.permalink ]]">[[ item.attributes.title ]]</paper-item>
+              </template>
+            </paper-listbox>
+
+            <!--Social Media Links-->
+            <h1 id="drawer__contact-section-header">Contact Me</h1>
+            <paper-listbox class="drawer-list">
+              <!--TODO add custom js to remove the iron-selected class after click-->
+              <paper-item>
+                <a href="https://github.com/joekarasek"
+                   target="_blank"
+                   class="social-media-links">
+                  <img class="drawer__social-media-icon"
+                       src="/app/resources/images/GitHub-Mark-32px.png"
+                       alt="">GitHub
+                </a>
+              </paper-item>
+              <paper-item>
+                <a href="http://www.linkedin.com/in/joe-karasek"
+                   target="_blank"
+                   class="social-media-links">
+                  <img class="drawer__social-media-icon"
+                       src="/app/resources/images/LinkedIn-Mark-32px.svg"
+                       alt="">LinkedIn
+                </a>
+              </paper-item>
+            </paper-listbox>
+          </div>
+
+        </app-drawer>
 
         <iron-pages role="main"
-                    selected="[[currentProject]]"
+                    selected="[[routeData.view]]"
                     attr-for-selected="name">
-          <my-about name="About"></my-about>
+          <my-about name=""></my-about>
           <template is="dom-repeat"
-                    items="[[projects]]">
-            <my-project name="[[ item.title ]]" project="[[ item ]]"></my-project>
+                    items="[[content.projects]]">
+            <my-project name="[[ item.attributes.permalink ]]" project="[[ item ]]"></my-project>
           </template>
         </iron-pages>
 
-      </app-header-layout>
+      </app-drawer-layout>
 
-    </app-drawer-layout>
+    </app-header-layout>
 
   </template>
 
@@ -170,13 +316,19 @@
 
     Polymer({
 
-      is: 'my-portfolio',
+      is: 'my-app',
 
       properties: {
 
         currentProject: {
           type: String,
           value: "About"
+        },
+        content: {
+          type: Object,
+          value: {
+            projects: []
+          }
         },
         projects: {
           type: Object,
@@ -397,7 +549,12 @@
           ]
         }
 
+      },
+
+      toggleDrawer: function() {
+        this.$.mainDrawer.toggle();
       }
+
     });
 
   </script>

@@ -1,14 +1,6 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 
 <dom-module id="my-about">
 
@@ -18,37 +10,59 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             :host {
                 display: block;
                 padding: 10px;
+                max-width: 780px;
+            }
+            a {
+                color: var(--secondary-text-color) !important;
+                text-decoration: none;
+            }
+            a:visited {
+                color: var(--default-primary-color);
+            }
+            a:hover {
+                color: var(--default-primary-color);
+                text-decoration: underline;
             }
             .card {
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                padding: 16px;
+                padding-top: 3px;
+                padding-right: 30px;
+                padding-left: 30px;
+                padding-bottom: 30px;
                 margin: 24px;
                 border-radius: 5px;
-                background-color: #fff;
-                color: #757575;
-
-                text-align: center;
-            }
-            .card p {
-                text-align: left;
+                color: var(--secondary-text-color);
+                background-color: var(--primary-background-color);
             }
             img {
                 max-width: 200px;
-                max-height: 200px;
+                max-height: 300px;
+                align-self: center;
+                float: right;
+                margin-top: 100px;
+                margin-right: 0px;
+                margin-left: 60px;
+                margin-bottom: 20px;
+            }
+
+            @media screen and (min-width: 900px) {
+                .technologies {
+                    width: 50%;
+                }
             }
         </style>
 
         <div class="card">
-            <img src="/images/joe4x4.jpg" alt="Joe Karasek">
+
+            <img src="/app/resources/images/joe4x4.jpg" alt="Joe Karasek">
             <h1>About Me</h1>
             <p>I'm an energetic and collaborative junior full stack web developer with a passion for learning and applying new skills and technologies. I'm proficient in both javascript and php with experience independently producing functional, professional, and documented software on a tight time-line.</p>
+            <h1>Background</h1>
             <p>I previously worked in environmental management as a river restoration consult and field botantist, but I didn't feel like it was the correct career path for me. So at the end of 2015 I began to teach myself how to build websites and enrolled in Epicodus, a vocational school for aspiring programmers. Over 6 months of intensive courses, I learned a wide range of web development technologies and tools. At the end of the program, I completed a 5 week internship during which I built both front- and back-end services, including a 'market trends' web component that allows users to interactively explore real estate market statistics through various charts and graphs.</p>
+
         </div>
 
     </template>
-
-    <!--Jquery TODO: Get rid of jquery -->
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
     <script>
 
@@ -57,7 +71,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             is: 'my-about',
 
             properties: {
+
             }
+
         });
 
     </script>

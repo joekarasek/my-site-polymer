@@ -1,0 +1,190 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="my-project">
+
+  <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+        max-width: 780px;
+      }
+      a {
+        color: var(--secondary-text-color) !important;
+        text-decoration: none;
+      }
+      a:visited {
+        color: var(--default-primary-color);
+      }
+      a:hover {
+        color: var(--default-primary-color);
+        text-decoration: underline;
+      }
+      .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding-top: 3px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        margin: 24px;
+        border-radius: 5px;
+        color: var(--secondary-text-color);
+        background-color: var(--primary-background-color);
+      }
+      .project__title__wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      .project__title__wrapper>ul {
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: 5px;
+      }
+      .project__title {
+        width: 310px;
+      }
+      .project__title h1 {
+        margin-bottom: 0px;
+      }
+      .project__title p {
+        margin-top: 0px;
+      }
+      .project__link {
+        display: inline-block;
+      }
+      .project__link a {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+      }
+      .project__link-icon {
+        width: 40px;
+        height: 40px;
+        color: var(--secondary-text-color);
+        fill: var(--secondary-text-color);
+      }
+      .technologies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .technology {
+        text-align: left;
+        flex-basis: 49%;
+      }
+      img {
+        max-width: 200px;
+        max-height: 300px;
+        align-self: center;
+      }
+
+      @media screen and (min-width: 900px) {
+        .technologies {
+          width: 50%;
+        }
+      }
+    </style>
+
+    <div class="card">
+
+      <div class="project__title__wrapper">
+        <div class="project__title">
+          <h1>[[ project.attributes.title ]]</h1>
+          <p>[[ project.attributes.dates ]]</p>
+        </div>
+        <ul>
+          <li class="project__link">
+            <template is="dom-if"
+                      if="[[ project.attributes.live ]]">
+              <a href="[[ project.attributes.live ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Live Site
+              </a>
+            </template>
+          </li>
+          <li class="project__link">
+            <template is="dom-if"
+                      if="[[ project.attributes.repo ]]">
+              <a href="[[ project.attributes.repo ]]" target="_blank">
+                <img class="project__link-icon" src="/app/resources/images/GitHub-Mark-32px.svg" alt="">
+                GitHub
+              </a>
+            </template>
+          </li>
+          <li class="project__link">
+            <template is="dom-if"
+                      if="[[ project.attributes.demo ]]">
+              <a href="[[ project.attributes.demo ]]" target="_blank">
+                <iron-icon class="project__link-icon" icon="device:devices"></iron-icon>
+                Demo
+              </a>
+            </template>
+          </li>
+        </ul>
+      </div>
+
+      <h3>Technologies Used</h3>
+      <div class="technologies">
+        <template is="dom-repeat"
+                  items="[[ project.attributes.tags ]]">
+          <li class="technology">[[ item ]]</li>
+        </template>
+      </div>
+
+      <h3>Description</h3>
+      <p id="projectBody"></p>
+
+      <template is="dom-if"
+                if="[[ project.attributes.contributors ]]">
+        <h3>Contributors</h3>
+        <ul>
+          <template is="dom-repeat"
+                    items="[[ project.attributes.contributors ]]">
+            <li>[[ item.name ]] <a href="[[ item.link ]]">GitHub</a></li>
+          </template>
+        </ul>
+      </template>
+
+      <template is="dom-if"
+                if="[[ project.attributes.imgs ]]">
+        <h3>Images</h3>
+        <template is="dom-repeat"
+                  items="[[ project.attributes.imgs ]]">
+          <img src="/app/resources/images/project_images/[[ item ]]" >
+        </template>
+      </template>
+    </div>
+
+  </template>
+
+  <!--Jquery TODO: Get rid of jquery -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-project',
+
+      properties: {
+        project: {
+          type: Object,
+          value: {
+          }
+        }
+      },
+
+      attached: function() {
+        this.$.projectBody.innerHTML = this.project.html;
+      }
+
+    });
+
+  </script>
+
+</dom-module>
