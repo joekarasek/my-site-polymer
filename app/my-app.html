@@ -112,6 +112,10 @@
         margin-left: 30px;
         margin-bottom: 5px;
       }
+      my-about {
+        margin-left: auto;
+        margin-right: auto;
+      }
       my-project {
         margin-left: auto;
         margin-right: auto;
@@ -220,7 +224,7 @@
                   effects="waterfall resize-title blend-background parallax-background"
                   height="300px">
         <div class="header-wrapper">
-          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <paper-icon-button icon="menu" on-tap="toggleDrawer"></paper-icon-button>
           <div class="drawer--collapsed name-logo" title>
             <h1>Joe Karasek</h1>
             <h3>Web Developer</h3>
@@ -236,7 +240,7 @@
       <app-drawer-layout has-scrolling-region>
 
         <!-- Drawer content -->
-        <app-drawer>
+        <app-drawer id="mainDrawer">
           <div class="name-logo--drawer" title>
             <h1>Joe Karasek</h1>
             <h3>Web Developer</h3>
@@ -545,6 +549,10 @@
           ]
         }
 
+      },
+
+      toggleDrawer: function() {
+        this.$.mainDrawer.toggle();
       }
 
     });
