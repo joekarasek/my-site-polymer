@@ -1,6 +1,8 @@
 ---
 title: Mazes
 layout: project
+startDate: 2016-02-15
+endDate: 2016-03-15
 teaser: Generate mazes with a variety of algorithms. Explore the bias these algorithms produce in the maze texture.
 permalink: MazeGenerator
 repo: https://github.com/joekarasek/mazes.git
